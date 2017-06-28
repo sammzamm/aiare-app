@@ -8,10 +8,10 @@ const router = express.Router();
 //create comment
 
 router.post('/', (req, res, next) => {
-  const newMessage = req.body;
+  const newComment = req.body;
   return knex('comments')
   .returning('*')
-  .insert(newMessage)
+  .insert(newComment)
   .then(() => res.sendStatus(200))
   .catch((err) => next(err));
 })
@@ -50,11 +50,9 @@ router.delete('/:id', (req, res, next) => {
         .del()
         .then(data => {
           let id = data[0].id
-          let name = data[0].title
-          let message = data[0].body
+          let comment = data[0].body
           res.json({
             id,
-            title,
             body
           })
         })
