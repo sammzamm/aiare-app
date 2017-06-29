@@ -8,12 +8,15 @@ const router = express.Router();
 //create comment
 
 router.post('/', (req, res, next) => {
-  const newComment = req.body;
-  return knex('comments')
-  .returning('*')
-  .insert(newComment)
-  .then(() => res.sendStatus(200))
-  .catch((err) => next(err));
+  console.log('i am here');
+  console.log(req.body);
+  res.send('hey')
+  // const newComment = req.body;
+  // return knex('comments')
+  // .returning('*')
+  // .insert(newComment)
+  // .then(() => res.sendStatus(200))
+  // .catch((err) => next(err));
 })
 
 

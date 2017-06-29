@@ -8,7 +8,6 @@ exports.seed = function(knex) {
           first_name: 'Samuel',
           last_name: 'Miller',
           email: 'sammzamm01@gmail.com',
-          hashed_password: '',
           city: 'Boulder',
           state: 'CO',
           profile_pic: 'http://taskexchange.cochrane.org/assets/default-profile-bfeeabd02c3b38305b18e4c2345fd54dbbd1a0a7bf403a31f08fca4fada50449.png'
@@ -18,7 +17,6 @@ exports.seed = function(knex) {
           first_name: 'Jonny',
           last_name: 'Carson',
           email: 'jonathan.carson@colorado.edu',
-          hashed_password: '',
           city: 'Loveland',
           state: 'CO',
           profile_pic: 'http://taskexchange.cochrane.org/assets/default-profile-bfeeabd02c3b38305b18e4c2345fd54dbbd1a0a7bf403a31f08fca4fada50449.png'
@@ -28,7 +26,6 @@ exports.seed = function(knex) {
           first_name: 'Robert',
           last_name: 'Daniel',
           email: 'robd1189@gmail.com',
-          hashed_password: '',
           city: 'Denver',
           state: 'CO',
           profile_pic: 'http://taskexchange.cochrane.org/assets/default-profile-bfeeabd02c3b38305b18e4c2345fd54dbbd1a0a7bf403a31f08fca4fada50449.png'
