@@ -36,7 +36,6 @@ exports.up = function(knex) {
     table.string('forecast_precipitation', 255).notNullable();
     table.integer('forecast_wind').notNullable();
     table.integer('forecast_gust').notNullable();
-    table.string('forecast_notes').notNullable();
     table.integer('actual_low_temp').notNullable();
     table.integer('actual_high_temp').notNullable();
     table.string('actual_sky_visibility', 255).notNullable();
