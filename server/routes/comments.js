@@ -11,12 +11,12 @@ router.post('/', (req, res, next) => {
   console.log('i am here');
   console.log(req.body);
   res.send('hey')
-  // const newComment = req.body;
-  // return knex('comments')
-  // .returning('*')
-  // .insert(newComment)
-  // .then(() => res.sendStatus(200))
-  // .catch((err) => next(err));
+  const newComment = req.body;
+  return knex('comments')
+  .returning('*')
+  .insert(newComment)
+  .then(() => res.sendStatus(200))
+  .catch((err) => next(err));
 })
 
 
@@ -56,7 +56,7 @@ router.delete('/:id', (req, res, next) => {
           let comment = data[0].body
           res.json({
             id,
-            body
+            comment
           })
         })
 })

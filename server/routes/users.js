@@ -14,9 +14,9 @@ router.get('/:id', (req, res, next) => {
   return knex('users').select('first_name', 'last_name', 'email', 'zip', 'profile_pic').where('id', id).first().then((user) => res.json(user)).catch((err) => next(err));
 });
 
-router.get('/:id/events', (req, res, next) => {
+router.get('/:id/observational_data', (req, res, next) => {
   const id = req.params.id;
-  return knex('events_users').select('*').where('user_id', id).innerJoin('events', 'events_users.event_id', 'events.id').then((events) => {
+  return knex('events_users').select('*').where('user_id', id).innerJoin('events', 'events_users.event_id', 'observational_data.id').then((events) => {
     knex('messages').then((messages) => {
       events.sort(function(a, b) {
         return a.id - b.id

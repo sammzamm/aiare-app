@@ -5,7 +5,7 @@ exports.up = function(knex) {
     table.string('other_photo_1');
     table.string('other_photo_2');
     table.string('other_photo_3');
-    table.integer('photos_id').references('id')inTable('observational_data');
+    table.integer('photos_id').references('id').inTable('observational_data');
   })
 };
 
