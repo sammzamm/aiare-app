@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 import { render } from 'react-dom';
 import {DropdownButton, MenuItem} from 'react-bootstrap/lib';
+import Avitar from './Avitar';
 import Footer from './Footer';
 // import cookie from 'react-cookie';
 
@@ -194,12 +195,10 @@ class ObservationalDataForm extends React.Component{
   }
 
 
-
-
   sendData(event){
     event.preventDefault();
     fetch('/api/observations',{
-      method:"POST",
+      method: "POST",
       headers: {
        'Accept': 'application/json',
         'Content-Type': 'application/json'
@@ -212,15 +211,17 @@ class ObservationalDataForm extends React.Component{
   render() {
     return (
       <div>
+      <Avitar />
       <div className="container">
+      <h2>Observational Data</h2>
       <form>
-      <div className="form-group row">
-        <h2>Observational Data</h2>
+      <div className="well">
         <div className="col-sm-10">
 
         <label for="location" className="col-sm-2 col-form-label">Location</label>
          <input id="location" onChange={this.changeLocation} name="location" type="text" className="validate form-controll" placeholder="Location"/>
          </div>
+
          <br></br>
          <input id='subRegion' onChange={this.changeSubRegion}
          name="subRegion" type="text" className="validate" placeholder="Sub Region"/>
@@ -243,7 +244,7 @@ class ObservationalDataForm extends React.Component{
          </DropdownButton>
        </div>
 
-        <h3>Type of Snow:</h3>
+        <h3>Type of Snow</h3>
         <input id="looseDry" className="snowType" onChange={this.changeSnowType} name="looseDry" type="checkbox" className="validate"/>
         <label for="looseDry">Loose Dry</label>
         <br></br>
@@ -278,10 +279,10 @@ class ObservationalDataForm extends React.Component{
         <label for="weakLayers">Weak Layers</label>
 
 
-        <h4>Snowpack</h4><textarea id="snowpack" rows="4" cols="50" onChange={this.changeSnowpack} name="snowpack" type="text" className="validate"></textarea>
+        <h3>Snowpack</h3><textarea id="snowpack" rows="4" cols="50" onChange={this.changeSnowpack} name="snowpack" type="text" className="validate"></textarea>
         <br></br>
 
-        <h4>Pit Depth</h4><input id="pitDepthFeet" onChange={this.changeSlopeAngle} name="pitDepthFeet"
+        <h3>Pit Depth</h3><input id="pitDepthFeet" onChange={this.changeSlopeAngle} name="pitDepthFeet"
         placeholder="Feet" type="number" min="0" max="10" className="validate"/>
         <input id="pitDepthInches" placeholder="Inches" onChange={this.changeSlopeAngle} name="pitDepthInches" type="number" min="0" max="11" className="validate"/>
         <br></br>
@@ -350,7 +351,7 @@ class ObservationalDataForm extends React.Component{
 
          <br></br>
          <br></br>
-         <button onClick={this.sendData}>Submit</button>
+         <button className="btn-default" onClick={this.sendData}>Submit</button>
       </div>
       </form>
       </div>

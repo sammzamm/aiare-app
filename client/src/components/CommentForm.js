@@ -37,9 +37,8 @@ class CommentForm extends React.Component{
 
   render(){
     return(
-      <div>
+      <div className="well">
       <textarea id="comments" name="comment" onChange={this.changeComment} rows="4" cols="50"></textarea>
-
       <button onClick={this.sendData}>Submit</button>
       </div>
     )

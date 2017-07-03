@@ -29,15 +29,18 @@ class Observations extends React.Component{
     render(){
       var listItems = this.state.observations.map(function(item, index){
         return (
+          <div>
           <div className="well">
             <form>
-              <div class="form-group">
+              <div className="form-group">
               <div className="row" key={index}>
                 <h3>{item.location}</h3>
                 <p>{item.aspect}</p>
               </div>
               </div>
             </form>
+          </div>
+           <CommentForm />
           </div>
         )
       })
