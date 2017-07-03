@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Nav from './Nav'
-import Footer from './Footer'
-import SignupForm from './SignupForm'
+import Nav from './Nav';
+import Footer from './Footer';
 import {DropdownButton, MenuItem} from 'react-bootstrap/lib';
-import axios from 'axios'
 import {BrowserRouter, Route, withRouter} from 'react-router-dom';
 
 class SignUp extends React.Component{
@@ -45,7 +43,7 @@ class SignUp extends React.Component{
   sendUserData(event){
     event.preventDefault();
     fetch('api/users', {
-      method: "POST".
+      method: "POST",
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
@@ -57,21 +55,19 @@ class SignUp extends React.Component{
 
   render(){
     return(
-      <div>
-      <Nav />
-
+    <div>
+    <div className="well">
     <form>
     <div className="container">
 
     <label><b>First Name</b></label>
-    <input onChange={this.changeUser} type="text" placeholder="First Name" name="firstName" required>
+    <input onChange={this.changeUser} type="text" placeholder="First Name" name="firstName" required/>
 
     <label><b>Last Name</b></label>
-    <input onChange={this.changeUser} type="text" placeholder="Last Name" name="lastName" required>
+    <input onChange={this.changeUser} type="text" placeholder="Last Name" name="lastName" required/>
 
     <label><b>City</b></label>
-    <input onChange={this.changeUser} type="text" placeholder="City" name="city" required>
-
+    <input onChange={this.changeUser} type="text" placeholder="City" name="city" required/>
 
     <div className="container">
      <DropdownButton onSelect={this.changeState} bsSize="default" title={this.state.state} id="dropdown-size-large">
@@ -131,43 +127,21 @@ class SignUp extends React.Component{
    </div>
 
     <label><b>Email</b></label>
-    <input onChange={this.changeUser} type="text" placeholder="Enter Email" name="email" required>
+    <input onChange={this.changeUser} type="text" placeholder="Enter Email" name="email" required/>
 
     <label><b>Password</b></label>
-    <input onChange={this.changeUser} type="password" placeholder="Enter Password" name="psw" required>
+    <input onChange={this.changeUser} type="password" placeholder="Enter Password" name="psw" required/>
 
     <div className="clearfix">
       <button onClick={this.sendUserData}>Sign Up!</button>
     </div>
   </div>
 </form>
-
+</div>
       <Footer />
       </div>
     )
   }
 }
 
-// class Signup extends Component {
-//   constructor(props){
-//     super(props)
-//     console.log(this.props);
-//   }
-//   createUserSubmission(user){
-//     console.log('posting')
-//     return axios.post('/api/users', user)
-//       .then((data)=>{
-//         console.log('the data',data);
-//       })
-//   }
-//
-//   render () {
-//     return(
-//       <div>
-//         <SignupForm createUserSubmission={this.createUserSubmission}/>
-//       </div>
-//     )
-//   }
-// }
-//
-// export default withRouter(SignUp)
+export default SignUp

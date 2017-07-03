@@ -218,18 +218,22 @@ class ObservationalDataForm extends React.Component{
       <div className="well">
         <div className="col-sm-10">
 
-        <label for="location" className="col-sm-2 col-form-label">Location</label>
+        <label for="location" className="col-sm-8 col-form-label inWell">Location</label>
          <input id="location" onChange={this.changeLocation} name="location" type="text" className="validate form-controll" placeholder="Location"/>
          </div>
 
          <br></br>
+         <label for="subRegion" className="col-sm-8 col-form-label inWell">Sub Region</label>
          <input id='subRegion' onChange={this.changeSubRegion}
          name="subRegion" type="text" className="validate" placeholder="Sub Region"/>
          <br></br>
+         <label for="elevation" className="col-sm-8 col-form-label inWell">Elevation</label>
         <input id="elevation" placeholder="Elevation" onChange={this.changeElevation} name="elevation" type="number" min="0" max="29029" className="validate"/>
         <br></br>
+        <label for="slopeAngle" className="col-sm-8 col-form-label inWell">Slope Angle</label>
         <input id="slopeAngle" placeholder="Slope Angle" onChange={this.changeSlopeAngle} name="slopeAngle" type="number" min="25" max="75" className="validate"/>
         <br></br>
+        <hr></hr>
 
         <div className="container">
          <DropdownButton onSelect={this.changeAspect} bsSize="default" title={this.state.aspect} id="dropdown-size-large">
@@ -244,50 +248,50 @@ class ObservationalDataForm extends React.Component{
          </DropdownButton>
        </div>
 
-        <h3>Type of Snow</h3>
+        <h3 className="inWell">Type of Snow</h3>
         <input id="looseDry" className="snowType" onChange={this.changeSnowType} name="looseDry" type="checkbox" className="validate"/>
         <label for="looseDry">Loose Dry</label>
-        <br></br>
+
         <input id="looseWet" className="snowType" onChange={this.changeSnowType} name="looseWet" type="checkbox" className="validate"/>
         <label for="looseWet">Loose Wet</label>
-        <br></br>
+
         <input id="wetSlab" className="snowType" onChange={this.changeSnowType} name="wetSlab" type="checkbox" className="validate"/>
         <label for="wetSlab">Wet Slab</label>
-        <br></br>
+
         <input id="stormSlab" className="snowType" onChange={this.changeSnowType} name="stormSlab" type="checkbox" className="validate"/>
         <label for="stormSlab">Storm Slab</label>
-        <br></br>
+
         <input id="windSlab" className="snowType" onChange={this.changeSnowType} name="windSlab" type="checkbox" className="validate"/>
         <label for="windSlab">Wind Slab</label>
         <br></br>
         <input id="persistantSlab" className="snowType" onChange={this.changeSnowType} name="persistantSlab" type="checkbox" className="validate"/>
         <label for="persistantSlab">Persistant Slab</label>
-        <br></br>
+
         <input id="deepSlab" className="snowType" onChange={this.changeSnowType} name="deepSlab" type="checkbox" className="validate"/>
         <label for="deepSlab">Deep Slab</label>
-        <br></br>
+
         <input id="cornice" className="snowType" onChange={this.changeSnowType} name="cornice" type="checkbox" className="validate"/>
         <label for="cornice">Cornice</label>
-        <br></br>
+
         <input id="freshSnow" className="snowType" onChange={this.changeSnowType} name="freshSnow" type="checkbox" className="validate"/>
         <label for="freshSnow">Fresh Snow</label>
-        <br></br>
+
         <input id="warming" className="snowType" onChange={this.changeSnowType} name="warming" type="checkbox" className="validate"/>
         <label for="warming">Warming</label>
-        <br></br>
+
         <input id="weakLayers" className="snowType" onChange={this.changeSnowType} name="weakLayers" type="checkbox" className="validate"/>
         <label for="weakLayers">Weak Layers</label>
 
 
-        <h3>Snowpack</h3><textarea id="snowpack" rows="4" cols="50" onChange={this.changeSnowpack} name="snowpack" type="text" className="validate"></textarea>
+        <h3 className="inWell">Snowpack</h3><textarea id="snowpack" rows="4" cols="50" onChange={this.changeSnowpack} name="snowpack" type="text" className="validate"></textarea>
         <br></br>
 
-        <h3>Pit Depth</h3><input id="pitDepthFeet" onChange={this.changeSlopeAngle} name="pitDepthFeet"
+        <h3 className="inWell">Pit Depth</h3><input id="pitDepthFeet" onChange={this.changeSlopeAngle} name="pitDepthFeet"
         placeholder="Feet" type="number" min="0" max="10" className="validate"/>
         <input id="pitDepthInches" placeholder="Inches" onChange={this.changeSlopeAngle} name="pitDepthInches" type="number" min="0" max="11" className="validate"/>
         <br></br>
 
-        <h3>Pit trigger</h3>
+        <h3 className="inWell">Pit trigger</h3>
         <br></br>
         <form>
         <input id="wrist" value="Wrist" className="pitTrigger" onChange={this.changePitSlide} name="trigger" type="radio" className="validate"/> Wrist
@@ -306,8 +310,8 @@ class ObservationalDataForm extends React.Component{
         <input id="pitPhoto" placeholder="Pit Photo URL" onChange={this.changePitPhoto} name="pitPhoto" type="text" className="validate"/>
         <br></br>
 
-        <h3>Weather</h3>
-        <h4>Forecast</h4>
+        <h3 className="inWell">Weather</h3>
+        <h4 className="inWell left">Forecast</h4>
         <input id="forecastLow" onChange={this.changeForecast} name="forecastLow"
         placeholder="Forecasted Low in &#8457;" type="number" min="-50" max="90" className="validate"/>
         <input id="forecastHigh" onChange={this.changeForecast} name="forecastHigh"
@@ -322,7 +326,7 @@ class ObservationalDataForm extends React.Component{
         <input id="forecastedGust" onChange={this.changeForecast} name="forecastedGust"
         placeholder="Forecasted Gusts in MPH" type="number" min="0" max="100" className="validate"/>
 
-        <h4>Actual Weather</h4>
+        <h4 className="inWell left">Actual Weather</h4>
         <input id="actualLow" placeholder="Actual Low in &#8457;" onChange={this.changeActual} name="actualLow" type="number" min="0" max="100" className="validate"/>
         <input id="actualHigh" placeholder="Actual High in &#8457;" onChange={this.changeActual} name="actualHigh" type="number" min="0" max="100" className="validate"/>
         <input id="actualSkyVis" onChange={this.changeActual} name="actualSkyVis"
@@ -336,13 +340,13 @@ class ObservationalDataForm extends React.Component{
         <textarea id="actualWeather" onChange={this.changeActual} name="actualWeather" placeholder="Actual Weather" type="text" rows="4" cols="50"
         className="validate"></textarea>
 
-        <h3>Approach</h3>
+        <h3 className="inWell">Approach</h3>
         <textarea id="idealApproach" onChange={this.changeApproach} name="idealApproach"
         placeholder="Ideal Approach" type="text" rows="4" cols="50" className="validate"></textarea>
         <textarea id="backupApproach" onChange={this.changeApproach} name="backupApproach"
         placeholder="Backup Approach" type="text" rows="4" cols="50" className="validate"></textarea>
 
-        <h3>Trip Report</h3>
+        <h3 className="inWell">Trip Report</h3>
         <textarea id="tripReport" onChange={this.changeTripReport} name="tripReport" placeholder="Trip Report" type="text" rows="8" cols="150"
         className="validate"></textarea>
         <br></br>

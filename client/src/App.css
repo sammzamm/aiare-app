@@ -27,29 +27,39 @@ footer {
   background-color: black;
   color: white;
   height: 20px;
+
 }
 
 .well {
-  opacity: 0.7;
+  opacity: 0.8;
   border-radius: 10px;
   border-style: solid;
   border-color: black;
+  background-color: black;
+}
+
+.left{
+  /*float: left;*/
 }
 
 h1 {
   text-align: center;
+  font-family: 'Bellefair', serif;
 }
 
 h2 {
   text-align: center;
+  font-family: 'Bellefair', serif;
 }
 
 h3 {
   text-align: center;
+  font-family: 'Bellefair', serif;
 }
 
 h4 {
   text-align: center;
+  font-family: 'Bellefair', serif;
 }
 
 #avitar{
@@ -66,4 +76,17 @@ h4 {
 
 #password{
 
+}
+
+.inWell{
+  color: white;
+}
+
+.snowType{
+  display: inline;
+  text-align: center;
+}
+
+.comment{
+  margin-right: 700px
 }
