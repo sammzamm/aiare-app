@@ -10,7 +10,7 @@ ReactDOM.render(
   <BrowserRouter>
     <div className="App">
       <Route exact path="/" component={App}></Route>
-      <Route path="/form" component={ObservationalDataForm}></Route>
+      <Route path="/observations" component={ObservationalDataForm}></Route>
     </div>
 
   </BrowserRouter>,
