@@ -8,9 +8,6 @@ const router = express.Router();
 //create comment
 
 router.post('/', (req, res, next) => {
-  console.log('i am here');
-  console.log(req.body);
-  res.send('hey')
   const newComment = req.body;
   return knex('comments')
   .returning('*')
