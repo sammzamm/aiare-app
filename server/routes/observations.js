@@ -36,10 +36,10 @@ router.get('/:id', (req, res, next) => {
     })
 })
 
-
+module.exports = router;
 
 // edit observational data post
-router.
+
 
 // delete observational data post
 
