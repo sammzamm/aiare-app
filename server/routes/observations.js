@@ -21,7 +21,7 @@ router.get('/', (req, res, next) => {
   knex('observational_data')
     .returning('*')
     .then(results => {
-      res.send(results[0])
+      res.send(results)
     })
 })
 
@@ -29,12 +29,19 @@ router.get('/:id', (req, res, next) => {
   let id = +req.params.id;
   knex('observational_data')
     .select('*')
+    .where('id', req.params.id)
+    .join('comments', 'comments.observational_data_id', 'observational_data.id')
     .then(results => {
       res.render('one-post', {
         comment: results[0]
       })
     })
 })
+
+router.get('/:id', (req, res, next) => {
+
+})
+
 
 module.exports = router;
 

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 import { render } from 'react-dom';
 import {DropdownButton, MenuItem} from 'react-bootstrap/lib';
+import Footer from './Footer';
 // import cookie from 'react-cookie';
 
 class ObservationalDataForm extends React.Component{
@@ -210,7 +211,7 @@ class ObservationalDataForm extends React.Component{
 
   render() {
     return (
-
+      <div>
       <div className="container">
       <form>
       <div className="form-group row">
@@ -352,6 +353,8 @@ class ObservationalDataForm extends React.Component{
          <button onClick={this.sendData}>Submit</button>
       </div>
       </form>
+      </div>
+      <Footer />
       </div>
     );
   }
