@@ -7,7 +7,7 @@ class Avitar extends React.Component{
     super(props)
 
     this.state = {
-      profile_pic: '../avitar.png',
+      profile_pic: '',
       first_name: '',
       last_name: ''
     }

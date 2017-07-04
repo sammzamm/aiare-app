@@ -21,6 +21,7 @@ exports.up = function(knex) {
     table.boolean('fresh_snow');
     table.boolean('warming');
     table.boolean('weak_layers');
+    table.specificType('layer', 'json[]');
     table.string('snowpack', 255).notNullable();
     table.integer('snowpack_in_feet').notNullable();
     table.integer('snowpack_in_inches').notNullable();
