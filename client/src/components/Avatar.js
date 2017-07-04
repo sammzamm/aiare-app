@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withRouer } from 'react-router-dom'
 import { render } from 'react-dom';
 
-class Avitar extends React.Component{
+class Avatar extends React.Component{
   constructor(props){
     super(props)
 
@@ -20,4 +20,4 @@ class Avitar extends React.Component{
   }
 }
 
-export default Avitar
+export default Avatar

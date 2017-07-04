@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 import { render } from 'react-dom';
 import {DropdownButton, MenuItem} from 'react-bootstrap/lib';
-import Avitar from './Avitar';
+import Avatar from './Avatar';
 import Footer from './Footer';
 // import cookie from 'react-cookie';
 
@@ -211,7 +211,7 @@ class ObservationalDataForm extends React.Component{
   render() {
     return (
       <div>
-      <Avitar />
+      <Avatar />
       <div className="container">
       <h2>Observational Data</h2>
       <form>
@@ -235,6 +235,7 @@ class ObservationalDataForm extends React.Component{
         <br></br>
         <hr></hr>
 
+        <h4 className="inWell">Aspect</h4>
         <div className="container">
          <DropdownButton onSelect={this.changeAspect} bsSize="default" title={this.state.aspect} id="dropdown-size-large">
            <MenuItem eventKey="North">North</MenuItem>
@@ -247,6 +248,7 @@ class ObservationalDataForm extends React.Component{
            <MenuItem eventKey="North/West">North/West</MenuItem>
          </DropdownButton>
        </div>
+       <hr></hr>
 
         <h3 className="inWell">Type of Snow</h3>
         <input id="looseDry" className="snowType" onChange={this.changeSnowType} name="looseDry" type="checkbox" className="validate"/>

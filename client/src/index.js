@@ -7,6 +7,7 @@ import SignUp from './components/SignUp.js';
 import { BrowserRouter, Route } from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
 import './index.css';
+import Profile from './components/Profile.js';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -15,7 +16,7 @@ ReactDOM.render(
       <Route path="/observationsform" component={ObservationalDataForm}></Route>
       <Route path="/allobservations" component={AllObservations}></Route>
       <Route path="/signup" component={SignUp}></Route>
-
+      <Route path="/myprofile" component={Profile}></Route>
     </div>
 
   </BrowserRouter>,

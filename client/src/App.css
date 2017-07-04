@@ -42,14 +42,23 @@ footer {
   /*float: left;*/
 }
 
+
+
 h1 {
   text-align: center;
   font-family: 'Bellefair', serif;
+  font-size: 70px;
+  border-style: solid;
+  border-color: black;
+  border-width: medium;
+  color: white;
 }
 
 h2 {
   text-align: center;
   font-family: 'Bellefair', serif;
+  font-size: 45px;
+  color: black
 }
 
 h3 {
@@ -70,12 +79,22 @@ h4 {
   border-color: black;
 }
 
-#signIn{
-
+.btn{
+  opacity: 0.8;
 }
 
-#password{
+.logIn{
+  border-radius: 10px;
+  width: 300px;
+  opacity: 0.8;
+}
 
+.signIn{
+  margin-right: 10px;
+}
+
+.signUp{
+  margin-left: 10px;
 }
 
 .inWell{
@@ -89,4 +108,31 @@ h4 {
 
 .comment{
   margin-right: 700px
+}
+
+#profile{
+  width:75%;
+  background-color:rgba(0,0,0,0.5);
+  height:100vh;
+  color:white;
+  padding-top:5%;
+
+}
+#profileInfo{
+  text-align:left;
+}
+#profileInfo > h1{
+  text-align:left;
+}
+#myTrips{
+  margin-top:3%;
+  color:black;
+}
+.profilePic{
+  width:90%;
+  border-radius:50%;
+}
+
+#comments{
+  width:
 }
