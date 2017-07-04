@@ -19,9 +19,9 @@ class SignUp extends React.Component{
       profile_pic: '../avitar.png',
     }
 
-    this.changeUser = this.changeUser.bind(this)
-    this.changeState = this.changeState.bind(this)
-    this.sendUserData = this.sendUserData.bind(this)
+    this.changeUser = this.changeUser.bind(this);
+    this.changeState = this.changeState.bind(this);
+    this.sendUserData = this.sendUserData.bind(this);
   }
 
   changeUser(event){

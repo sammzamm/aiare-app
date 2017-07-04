@@ -35,8 +35,19 @@ class AllObservations extends React.Component{
             <form>
               <div className="form-group">
               <div className="row" key={index}>
-                <h3 className="inWell">{item.location} - {item.sub_region}</h3>
-                <p className="inWell">{item.aspect}</p>
+                <h3 className="inWell">{item.location} - {item.sub_region} - {item.date_of_outing}</h3>
+                <hr></hr>
+                <h5 className="inWell">Aspect: {item.aspect} of {item.sub_region}.</h5>
+                <h5 className="inWell">Elevation: {item.elevation}</h5>
+                <h5 className="inWell">Slope Angle: {item.slope_angle} Degrees</h5>
+                <h5 className="inWell">Identified Potential Objective Hazards:</h5>
+                <h5 className="inWell"></h5>
+                <h5 className="inWell"></h5>
+                <h5 className="inWell"></h5>
+                <h5 className="inWell"></h5>
+                <h5 className="inWell"></h5>
+                <h5 className="inWell"></h5>
+
               </div>
               </div>
             </form>

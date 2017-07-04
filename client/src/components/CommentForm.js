@@ -12,7 +12,7 @@ class CommentForm extends React.Component{
       body: ''
     }
 
-    this.changeComment = this.changeComment.bind(this)
+    this.changeComment = this.changeComment.bind(this);
   }
 
   changeComment(event){
@@ -39,6 +39,7 @@ class CommentForm extends React.Component{
     return(
       <div className="well comment">
       <h3 className="inWell">Comments</h3>
+      <hr></hr>
       <textarea id="comments" name="comment" onChange={this.changeComment}></textarea>
       <button onClick={this.sendData}>Submit</button>
       </div>

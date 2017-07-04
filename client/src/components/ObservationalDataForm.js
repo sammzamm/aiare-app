@@ -16,6 +16,8 @@ class ObservationalDataForm extends React.Component{
       location: '',
       sub_region: '',
       aspect: 'Choose Aspect',
+      leeward: false,
+      crossloading: false,
       elevation: 0,
       slope_angle: 0,
       loose_dry: false,
@@ -29,6 +31,16 @@ class ObservationalDataForm extends React.Component{
       fresh_snow: false,
       warming: false,
       weak_layers: false,
+      depth_hoar: false,
+      surface_hoar: false,
+      hoar_frost: false,
+      graupel: false,
+      facets: false,
+      woomphing: false,
+      shooting_cracks: false,
+      convex_roller: false,
+      concave_roller: false,
+      layers: [],
       snowpack: '',
       snowpack_in_feet: 0,
       snowpack_in_inches: 0,
@@ -56,24 +68,23 @@ class ObservationalDataForm extends React.Component{
       route_photo: ''
     }
 
-    this.changeLocation = this.changeLocation.bind(this)
-    this.changeSubRegion = this.changeSubRegion.bind(this)
-    this.changeAspect = this.changeAspect.bind(this)
-    this.changeElevation = this.changeElevation.bind(this)
-    this.changeSlopeAngle = this.changeSlopeAngle.bind(this)
-    this.changeSnowType = this.changeSnowType.bind(this)
-    this.changeSnowpack = this.changeSnowpack.bind(this)
-    this.changeSnowpackInFeet = this.changeSnowpackInFeet.bind(this)
-    this.changeSnowpackInInches = this.changeSnowpackInInches.bind(this)
-    this.changePitSlide = this.changePitSlide.bind(this)
-    this.changePitPhoto = this.changePitPhoto.bind(this)
-    this.changeForecast = this.changeForecast.bind(this)
-    this.changeActual = this.changeActual.bind(this)
-    this.changeApproach = this.changeApproach.bind(this)
-    this.changeTripReport = this.changeTripReport.bind(this)
+    this.changeLocation = this.changeLocation.bind(this);
+    this.changeSubRegion = this.changeSubRegion.bind(this);
+    this.changeAspect = this.changeAspect.bind(this);
+    this.changeElevation = this.changeElevation.bind(this);
+    this.changeSlopeAngle = this.changeSlopeAngle.bind(this);
+    this.changeSnowType = this.changeSnowType.bind(this);
+    this.changeSnowpack = this.changeSnowpack.bind(this);
+    this.changeSnowpackInFeet = this.changeSnowpackInFeet.bind(this);
+    this.changeSnowpackInInches = this.changeSnowpackInInches.bind(this);
+    this.changePitSlide = this.changePitSlide.bind(this);
+    this.changePitPhoto = this.changePitPhoto.bind(this);
+    this.changeForecast = this.changeForecast.bind(this);
+    this.changeActual = this.changeActual.bind(this);
+    this.changeApproach = this.changeApproach.bind(this);
+    this.changeTripReport = this.changeTripReport.bind(this);
 
-
-    this.sendData = this.sendData.bind(this)
+    this.sendData = this.sendData.bind(this);
 
   }
 
@@ -120,7 +131,18 @@ class ObservationalDataForm extends React.Component{
       cornice: event.target.value,
       fresh_snow: event.target.value,
       warming: event.target.value,
-      weak_layers: event.target.value
+      weak_layers: event.target.value,
+      leeward: event.target.value,
+      crossloading: event.target.value,
+      depth_hoar: event.target.value,
+      surface_hoar: event.target.value,
+      hoar_frost: event.target.value,
+      graupel: event.target.value,
+      facets: event.target.value,
+      woomphing: event.target.value,
+      shooting_cracks: event.target.value,
+      convex_roller: event.target.value,
+      concave_roller: event.target.value,
     })
   }
 
@@ -216,11 +238,12 @@ class ObservationalDataForm extends React.Component{
       <h2>Observational Data</h2>
       <form>
       <div className="well">
-        <div className="col-sm-10">
+        <div className="col-sm-12">
 
+        <h3 className="inWell">Location</h3>
         <label for="location" className="col-sm-8 col-form-label inWell">Location</label>
          <input id="location" onChange={this.changeLocation} name="location" type="text" className="validate form-controll" placeholder="Location"/>
-         </div>
+
 
          <br></br>
          <label for="subRegion" className="col-sm-8 col-form-label inWell">Sub Region</label>
@@ -232,6 +255,7 @@ class ObservationalDataForm extends React.Component{
         <br></br>
         <label for="slopeAngle" className="col-sm-8 col-form-label inWell">Slope Angle</label>
         <input id="slopeAngle" placeholder="Slope Angle" onChange={this.changeSlopeAngle} name="slopeAngle" type="number" min="25" max="75" className="validate"/>
+        </div>
         <br></br>
         <hr></hr>
 
@@ -248,41 +272,125 @@ class ObservationalDataForm extends React.Component{
            <MenuItem eventKey="North/West">North/West</MenuItem>
          </DropdownButton>
        </div>
+
+       <input id="leeward" className="snowType" onChange={this.changeSnowType} name="leeward" type="checkbox" className="validate"/>
+       <label for="leeward">Leeward</label>
+       <input id="crossloading" className="snowType" onChange={this.changeSnowType} name="crossloading" type="checkbox" className="validate"/>
+       <label for="crossloading">Crossloading</label>
        <hr></hr>
 
-        <h3 className="inWell">Type of Snow</h3>
+        <h3 className="inWell">Objective Hazards</h3>
+        <div className="col-sm-3">
+        <div>
         <input id="looseDry" className="snowType" onChange={this.changeSnowType} name="looseDry" type="checkbox" className="validate"/>
         <label for="looseDry">Loose Dry</label>
+        </div>
 
+        <div>
         <input id="looseWet" className="snowType" onChange={this.changeSnowType} name="looseWet" type="checkbox" className="validate"/>
         <label for="looseWet">Loose Wet</label>
+        </div>
 
+        <div>
         <input id="wetSlab" className="snowType" onChange={this.changeSnowType} name="wetSlab" type="checkbox" className="validate"/>
         <label for="wetSlab">Wet Slab</label>
+        </div>
 
+        <div>
         <input id="stormSlab" className="snowType" onChange={this.changeSnowType} name="stormSlab" type="checkbox" className="validate"/>
         <label for="stormSlab">Storm Slab</label>
+        </div>
 
+        <div>
         <input id="windSlab" className="snowType" onChange={this.changeSnowType} name="windSlab" type="checkbox" className="validate"/>
         <label for="windSlab">Wind Slab</label>
-        <br></br>
+        </div>
+        </div>
+
+        <div className="col-sm-3">
+        <div>
         <input id="persistantSlab" className="snowType" onChange={this.changeSnowType} name="persistantSlab" type="checkbox" className="validate"/>
         <label for="persistantSlab">Persistant Slab</label>
+        </div>
 
+        <div>
         <input id="deepSlab" className="snowType" onChange={this.changeSnowType} name="deepSlab" type="checkbox" className="validate"/>
         <label for="deepSlab">Deep Slab</label>
+        </div>
 
+        <div>
         <input id="cornice" className="snowType" onChange={this.changeSnowType} name="cornice" type="checkbox" className="validate"/>
         <label for="cornice">Cornice</label>
+        </div>
 
+        <div>
         <input id="freshSnow" className="snowType" onChange={this.changeSnowType} name="freshSnow" type="checkbox" className="validate"/>
         <label for="freshSnow">Fresh Snow</label>
+        </div>
 
+        <div>
         <input id="warming" className="snowType" onChange={this.changeSnowType} name="warming" type="checkbox" className="validate"/>
         <label for="warming">Warming</label>
+        </div>
+        </div>
 
+        <div className="col-sm-3">
+        <div>
         <input id="weakLayers" className="snowType" onChange={this.changeSnowType} name="weakLayers" type="checkbox" className="validate"/>
         <label for="weakLayers">Weak Layers</label>
+        </div>
+
+        <div>
+        <input id="depth_hoar" className="snowType" onChange={this.changeSnowType} name="depth_hoar" type="checkbox" className="validate"/>
+        <label for="depth_hoar">Depth Hoar</label>
+        </div>
+
+        <div>
+        <input id="surface_hoar" className="snowType" onChange={this.changeSnowType} name="surface_hoar" type="checkbox" className="validate"/>
+        <label for="surface_hoar">Surface Hoar</label>
+        </div>
+
+        <div>
+        <input id="hoar_frost" className="snowType" onChange={this.changeSnowType} name="hoar_frost" type="checkbox" className="validate"/>
+        <label for="hoar_frost">Hoar Frost</label>
+        </div>
+
+        <div>
+        <input id="graupel" className="snowType" onChange={this.changeSnowType} name="graupel" type="checkbox" className="validate"/>
+        <label for="graupel">Graupel</label>
+        </div>
+        </div>
+
+        <div className="col-sm-3">
+        <div>
+        <input id="facets" className="snowType" onChange={this.changeSnowType} name="facets" type="checkbox" className="validate"/>
+        <label for="facets">Facets</label>
+        </div>
+
+        <div>
+        <input id="woomphing" className="snowType" onChange={this.changeSnowType} name="woomphing" type="checkbox" className="validate"/>
+        <label for="woomphing">Woomphing</label>
+        </div>
+
+        <div>
+        <input id="shooting_cracks" className="snowType" onChange={this.changeSnowType} name="shooting_cracks" type="checkbox" className="validate"/>
+        <label for="shooting_cracks">Shooting Cracks</label>
+        </div>
+
+        <div>
+        <input id="convex_roller" className="snowType" onChange={this.changeSnowType} name="convex_roller" type="checkbox" className="validate"/>
+        <label for="convex_roller">Convex Roller</label>
+        </div>
+
+        <div>
+        <input id="concave_roller" className="snowType" onChange={this.changeSnowType} name="concave_roller" type="checkbox" className="validate"/>
+        <label for="concave_roller">Concave Roller</label>
+        </div>
+        </div>
+
+        <div>
+        <hr></hr>
+        </div>
 
 
         <h3 className="inWell">Snowpack</h3><textarea id="snowpack" rows="4" cols="50" onChange={this.changeSnowpack} name="snowpack" type="text" className="validate"></textarea>
