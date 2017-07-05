@@ -11,8 +11,3 @@ http://thewhiteroom.herokuapp.com/
 -Node
 -Express
 -Bootstrap
-
-
-#Future goals
-Due to time constraints, I am also hoping to impliment the following features in the future.
--
