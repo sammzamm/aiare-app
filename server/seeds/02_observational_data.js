@@ -70,7 +70,7 @@ exports.seed = function(knex) {
         {
           id: 2,
           owner_id: 3,
-          date_time: '1-15-17',
+          date_of_outing: '1-15-17',
           location: 'RMNP',
           sub_region: 'Flattop Mtn',
           aspect: 'western',
@@ -136,7 +136,7 @@ exports.seed = function(knex) {
         {
           id: 3,
           owner_id: 2,
-          date_time: '2-17-17',
+          date_of_outing: '2-17-17',
           location: 'RMNP',
           sub_region: 'The Trough',
           aspect: 'east',

@@ -5,12 +5,25 @@ html, body {
   height: auto;
 }
 
+textarea{
+  border-radius: 10px;
+}
+
+.btn{
+  border-radius: 10px;
+  opacity: 0.8
+}
+
 input[type=number] {
-  width: 180px;
+  width: 200px;
+  border-radius: 10px;
+  margin-left: 20px
 }
 
 input[type=text] {
   width: 200px;
+  border-radius: 10px;
+  margin-left: 20px
 }
 
 input[type=checkbox] {
@@ -91,10 +104,6 @@ h5{
   border-color: black;
 }
 
-.btn{
-  opacity: 0.8;
-}
-
 .logIn{
   border-radius: 10px;
   width: 300px;
@@ -148,4 +157,19 @@ h5{
 #comments{
   width: 100%;
   height: 80%
+}
+
+.textBox{
+  width: 35%;
+  height: 20%;
+}
+
+.false{
+  text-decoration:line-through;
+  color: grey
+}
+
+.myOwnHR{
+  background-color: white;
+  margin-top: 140px;
 }
