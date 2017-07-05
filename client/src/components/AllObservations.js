@@ -30,7 +30,6 @@ class AllObservations extends React.Component{
       var listItems = this.state.observations.map(function(item, index){
         return (
           <div key={index}>
-          <h2>All Posts</h2>
           <div className="well">
             <form>
               <div className="form-group">
@@ -42,7 +41,7 @@ class AllObservations extends React.Component{
                 <h5 className="inWell">Slope Angle: {item.slope_angle} Degrees</h5>
                 <hr></hr>
 
-                <h4 className="inWell">Identified Potential Objective Hazards</h4>
+                <h3 className="inWell">Identified Potential Objective Hazards</h3>
 
                 <br></br>
                 <div className="inWell">
@@ -62,7 +61,7 @@ class AllObservations extends React.Component{
                 <h5 className={item.fresh_snow}>Fresh Snow</h5>
                 <h5 className={item.warming}>Warming</h5>
                 </div>
-                <div className="col-sm-3 inWell">
+                <div className="col-sm-3 inWell true">
                 <h5 className={item.weak_layers}>Weak Layers</h5>
                 <h5 className={item.depth_hoar}>Depth Hoar</h5>
                 <h5 className={item.surface_hoar}>Surface Hoar</h5>
@@ -70,7 +69,7 @@ class AllObservations extends React.Component{
                 <h5 className={item.graupel}>Graupel</h5>
                 <h5 className={item.facets}>Facets</h5>
                 </div>
-                <div className="col-sm-3 inWell">
+                <div className="col-sm-3 inWell true">
                 <h5 className={item.woomphing}>Woomphing</h5>
                 <h5 className={item.shooting_cracks}>Shooting Cracks</h5>
                 <h5 className={item.convex_roller}>Convex Roller</h5>
@@ -86,15 +85,78 @@ class AllObservations extends React.Component{
 
                 <div className="col-sm-12">
                 <h3 className="inWell">Snowpack</h3>
-                <h5 className="inWell">{item.snowpack}</h5>
+                <h5 className="inWell">&#9900;  {item.snowpack}</h5>
+                <h5 className="inWell">&#9900;  Current snowpack is {item.snowpack_in_feet} feet and {item.snowpack_in_inches} inches.</h5>
                 </div>
 
-                <h5 className="inWell"></h5>
-                <h5 className="inWell"></h5>
-                <h5 className="inWell"></h5>
-                <h5 className="inWell"></h5>
-                <h5 className="inWell"></h5>
-                <h5 className="inWell"></h5>
+                <div className="myOwnHR">
+                <hr></hr>
+                </div>
+
+                <div className="col-sm-12 inWell">
+                <h3>Compression Test</h3>
+                <h6>(Must cut out back for accurate test results)</h6>
+                </div>
+
+                <div className="col-sm-2 inWell true">
+                <h5 className={item.pit_slide_wrist}>From Wrist</h5>
+                </div>
+                <div className="col-sm-2 inWell true">
+                <h5 className={item.pit_slide_elbow}>From Elbow</h5>
+                </div>
+                <div className="col-sm-2 inWell true">
+                <h5 className={item.pit_slide_shoulder}>From Shoulder</h5>
+                </div>
+                <div className="col-sm-2 inWell true">
+                <h5 className={item.pit_slide_body_weight}>From Body Weight</h5>
+                </div>
+                <div className="col-sm-2 inWell true">
+                <h5 className={item.pit_slide_jump}>From a Jump</h5>
+                </div>
+
+                <div className="myOwnHR">
+                <hr></hr>
+                </div>
+
+
+                <div className="col-sm-12">
+                <img className="pitPhoto" src={item.pit_photo} alt="Pit Photo"></img>
+                </div>
+                <div className="col-sm-12">
+                </div>
+
+                <hr></hr>
+
+                <div className="col-sm-12 inWell">
+                <h3>Weather</h3>
+                <div className="col-sm-6">
+                <h4 className="underline">Forecasted</h4>
+                <br></br>
+                <h5>Low: {item.forecast_low_temp}</h5>
+                <h5>High: {item.forecast_high_temp}</h5>
+                <h5>Sky Visibility: {item.forecast_sky_visibility}</h5>
+                <h5>Precipitation: {item.forecast_precipitation}</h5>
+                <h5>Wind: {item.forecast_wind}</h5>
+                <h5>Gusts: {item.forecast_gust}</h5>
+                </div>
+                <div className="col-sm-6">
+                <h4 className="underline">Actual</h4>
+                <br></br>
+                <h5>Low: {item.actual_low_temp}</h5>
+                <h5>High: {item.actual_high_temp}</h5>
+                <h5>Precipitation: {item.forecast_precipitation}</h5>
+                <h5>Weather: {item.actual_weather}</h5>
+                <h5>Wind: {item.actual_wind}</h5>
+                </div>
+                </div>
+
+                <div className="myOwnHR">
+                <hr></hr>
+                </div>
+
+
+
+
 
               </div>
               </div>
@@ -106,6 +168,7 @@ class AllObservations extends React.Component{
       })
       return (
         <div className="container">
+                  <h2>All Posts</h2>
           {listItems}
         </div>
       )

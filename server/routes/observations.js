@@ -33,13 +33,26 @@ router.get('/', (req, res, next) => {
 router.get('/:id', (req, res, next) => {
   let id = +req.params.id;
   knex('observational_data')
-    .select('*')
-    .where('id', req.params.id)
-    .join('comments', 'comments.observational_data_id', 'observational_data.id')
-    .then(results => {
-      res.render('one-post', {
-        comment: results[0]
-      })
+    .where('id', id)
+    .then((trip) => {
+      let currentTrip = trip[0];
+      knex('comments')
+        .where('observational_data_id', trip[0].id)
+        .join('users', 'users.id', 'comments.user_id')
+        .then((comments) => {
+          currentTrip.comments = comments;
+          knex('users')
+          .where('id', trip[0].owner_id)
+          .then((user) => {
+            currentTrip.user = user[0];
+            knex('photos')
+              .where('photos_id', trip[0].id)
+              .then((photos) => {
+                currentTrip.photos = photos[0]
+                res.send(currentTrip)
+              })
+          })
+        })
     })
 })
 

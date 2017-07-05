@@ -1,40 +1,54 @@
 import React, { Component } from 'react';
-
+import { Line } from 'react-chartjs-2'
+const colors = ['rgba(34,0,255, .1)', 'rgba(34,0,255, .2)', 'rgba(34,0,255, .3)', 'rgba(34,0,255, .4)', 'rgba(34,0,255, .5)', 'rgba(34,0,255, .6)', 'rgba(34,0,255, .7)','rgba(34,0,255, .8)','rgba(34,0,255, .9)']
 class TripReport extends Component {
   constructor(props){
     super(props)
     this.state = {
     }
+    this.toInches = this.toInches.bind(this);
   }
   componentWillMount(){
     fetch(`/api${this.props.location.pathname}`)
     .then(res => res.json())
     .then((trip) => {
-      console.log(trip);
       this.setState(trip)
     })
   }
+  toInches(layers){
+    if(layers !== undefined){
+      let datasets = [];
+      for(var i = 0; i < layers.length; i++){
+        let dataset = {};
+        dataset.label = layers[i].type;
+        let inches = 0;
+        for(var j = 0; j <= i; j++){
+          inches += layers[j].ft * 12 + layers[j].in
+        }
+        dataset.data = [inches, inches];
+        dataset.backgroundColor = [colors[i]];
+        datasets.push(dataset);
+      }
+      return datasets;
+    }
+  }
   render(){
+    let layers = this.toInches(this.state.layers);
+    let chartData = {
+     labels: [],
+     datasets: layers}
+     let chartOptions = {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      }
+  }
     return (
       <div className="container" id="trip">
-        <div className="row">
-          <div className="col-lg-6" id="weather">
-            <h3>Weather Forecast</h3>
-            <p><strong>Wind:</strong> {this.state.forecast_wind} mph &nbsp;&nbsp;&nbsp; <strong>Gust: </strong>{this.state.forecast_gust} mph</p>
-            <p><strong>Sky Visibility:</strong> {this.state.forecast_sky_visibility}</p>
-            <p><strong>High Temp:</strong> {this.state.forecast_high_temp} &#176;F</p>
-            <p><strong>Low Temp:</strong> {this.state.forecast_low_temp} &#176;F</p>
-          </div>
-          <div className="col-lg-6" id="weather">
-            <h3>Actual Weather</h3>
-            <p><strong>Description:</strong> {this.state.actual_weather}</p>
-            <p><strong>Wind:</strong> {this.state.actual_wind}</p>
-            <p><strong>Sky Visibility:</strong> {this.state.actual_sky_visibility}</p>
-            <p><strong>Precipitation: </strong>{this.state.actual_precipitation}</p>
-            <p><strong>High Temp:</strong> {this.state.actual_high_temp} &#176;F</p>
-            <p><strong>Low Temp:</strong> {this.state.actual_low_temp} &#176;F</p>
-          </div>
-        </div>
+        <Line data={chartData} options={chartOptions}/>
       </div>
     )
   }

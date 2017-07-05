@@ -389,7 +389,7 @@ class ObservationalDataForm extends React.Component{
         </div>
 
         <br></br>
-        <div>
+        <div className="myOwnHR">
         <hr></hr>
         </div>
 
@@ -427,9 +427,6 @@ class ObservationalDataForm extends React.Component{
         <label className="inWell" for="jump">Jump</label>
         </form>
         </div>
-
-        <br></br>
-        <hr></hr>
 
         <div className="col-sm-6 inWell">
         <h5>Pit Photo</h5>

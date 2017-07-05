@@ -4,6 +4,7 @@ import App from './App';
 import ObservationalDataForm from './components/ObservationalDataForm.js';
 import AllObservations from './components/AllObservations.js';
 import SignUp from './components/SignUp.js';
+import TripReport from './components/TripReport.js'
 import { BrowserRouter, Route } from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
 import './index.css';
@@ -15,6 +16,7 @@ ReactDOM.render(
       <Route exact path="/" component={App}></Route>
       <Route path="/observationsform" component={ObservationalDataForm}></Route>
       <Route path="/allobservations" component={AllObservations}></Route>
+      <Route path="/observations" component={TripReport}></Route>
       <Route path="/signup" component={SignUp}></Route>
       <Route path="/myprofile" component={Profile}></Route>
     </div>
