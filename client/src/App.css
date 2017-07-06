@@ -7,23 +7,27 @@ html, body {
 
 textarea{
   border-radius: 10px;
+  margin-top: 10px;
 }
 
 .btn{
   border-radius: 10px;
-  opacity: 0.8
+  opacity: 0.8;
+  margin-top: 10px;
 }
 
 input[type=number] {
   width: 200px;
   border-radius: 10px;
-  margin-left: 20px
+  margin-left: 20px;
+  margin-top: 10px;
 }
 
 input[type=text] {
   width: 200px;
   border-radius: 10px;
-  margin-left: 20px
+  margin-left: 20px;
+  margin-top: 10px;
 }
 
 input[type=checkbox] {
@@ -35,11 +39,6 @@ label{
 }
 
 .snowType {
-  margin-left: 0;
-  padding-left: 0;
-}
-
-.pitTrigger {
   margin-left: 0;
   padding-left: 0;
 }
@@ -202,4 +201,16 @@ h6{
 #about{
   margin-top: 200px;
   color: black
+}
+
+#actualWeather{
+  margin-left: 4%;
+}
+
+.textCenter{
+  margin-left: 12%
+}
+
+#tripReport{
+  margin-left: 1%
 }

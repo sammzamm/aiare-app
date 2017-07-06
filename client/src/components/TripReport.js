@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2'
-const colors = ['rgba(34,0,255, .1)', 'rgba(34,0,255, .2)', 'rgba(34,0,255, .3)', 'rgba(34,0,255, .4)', 'rgba(34,0,255, .5)', 'rgba(34,0,255, .6)', 'rgba(34,0,255, .7)','rgba(34,0,255, .8)','rgba(34,0,255, .9)']
+const colors = ['rgba(20,120,250, .7)', 'rgba(34,0,255, .7)', 'rgba(20,120,250, .7)', 'rgba(34,0,255, .7)', 'rgba(20,120,250, .7)', 'rgba(34,0,255, .7)', 'rgba(20,120,250, .7)','rgba(34,0,255, .7)','rgba(20,120,250, .7)']
 class TripReport extends Component {
   constructor(props){
     super(props)
@@ -9,11 +9,21 @@ class TripReport extends Component {
     this.toInches = this.toInches.bind(this);
   }
   componentWillMount(){
-    fetch(`/api${this.props.location.pathname}`)
-    .then(res => res.json())
-    .then((trip) => {
-      this.setState(trip)
-    })
+    console.log(this.props.locationParent);
+    if(this.props.locationParent){
+
+      fetch(`/api/observations/${this.props.locationParent}`)
+      .then(res => res.json())
+      .then((trip) => {
+        this.setState(trip)
+      })
+    }else{
+      fetch(`/api${this.props.location.pathname}`)
+      .then(res => res.json())
+      .then((trip) => {
+        this.setState(trip)
+      })
+    }
   }
   toInches(layers){
     if(layers !== undefined){

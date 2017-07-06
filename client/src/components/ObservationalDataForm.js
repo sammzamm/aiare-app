@@ -397,35 +397,50 @@ class ObservationalDataForm extends React.Component{
         <h3 className="inWell">Snowpack Notes</h3>
         <textarea id="snowpack" onChange={this.changeSnowpack} name="snowpack" type="text" className="validate textBox"></textarea>
         </div>
-        <br></br>
+
+        <div className="myOwnHR">
+        <hr></hr>
+        </div>
 
         <div className="col-sm-12">
-        <h3 className="inWell">Pit Depth</h3>
+        <h3 className="inWell">Avy Pit</h3>
+
+        <div className="col-sm-6">
+        <h4 className="inWell">Notes</h4>
         <input id="pitDepthFeet" onChange={this.changeSlopeAngle} name="pitDepthFeet"
         placeholder="Feet" type="number" min="0" max="10" className="validate"/>
         <input id="pitDepthInches" placeholder="Inches" onChange={this.changeSlopeAngle} name="pitDepthInches" type="number" min="0" max="11" className="validate"/>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
         </div>
-        <br></br>
 
-        <div className="col-sm-12">
-        <h3 className="inWell">Pit trigger</h3>
-        <br></br>
+        <h4 className="inWell">Trigger</h4>
+
+        <div className="col-sm-2"></div>
+
+        <div className="col-sm-2">
         <form>
-        <input id="wrist" value="Wrist" className="pitTrigger" onChange={this.changePitSlide} name="trigger" type="radio" className="validate"/>
+        <input id="wrist" value="Wrist" onChange={this.changePitSlide} name="trigger" type="radio" className="validate"/>
         <label className="inWell" for="wrist">Wrist</label>
         <br></br>
-        <input id="elbow" value="Elbow" className="pitTrigger" onChange={this.changePitSlide} name="trigger" type="radio" className="validate"/>
+        <input id="elbow" value="Elbow" onChange={this.changePitSlide} name="trigger" type="radio" className="validate"/>
         <label className="inWell" for="elbow">Elbow</label>
         <br></br>
-        <input id="shoulder" value="Shoulder" className="pitTrigger" onChange={this.changePitSlide} name="trigger" type="radio" className="validate"/>
+        <input id="shoulder" value="Shoulder" onChange={this.changePitSlide} name="trigger" type="radio" className="validate"/>
         <label className="inWell" for="shoulder">Shoulder</label>
         <br></br>
-        <input id="bodyWeight" value="Body Weight" className="pitTrigger" onChange={this.changePitSlide} name="trigger" type="radio" className="validate"/>
+        <input id="bodyWeight" value="Body Weight" onChange={this.changePitSlide} name="trigger" type="radio" className="validate"/>
         <label className="inWell" for="weighted">Body Weight</label>
         <br></br>
-        <input id="jump" value="Jump" className="pitTrigger" onChange={this.changePitSlide} name="trigger" type="radio" className="validate"/>
+        <input id="jump" value="Jump" onChange={this.changePitSlide} name="trigger" type="radio" className="validate"/>
         <label className="inWell" for="jump">Jump</label>
         </form>
+        </div>
+        <div className="col-sm-2"></div>
         </div>
 
         <div className="col-sm-6 inWell">
@@ -434,48 +449,67 @@ class ObservationalDataForm extends React.Component{
         </div>
         <br></br>
 
+        <div className="col-sm-12"><hr></hr></div>
+
+
+<div className="col-sm-12">
         <h3 className="inWell">Weather</h3>
-        <h4 className="inWell left">Forecast</h4>
+        <div className="col-sm-6">
+        <h4 className="inWell underline left">Forecast</h4>
         <input id="forecastLow" onChange={this.changeForecast} name="forecastLow"
         placeholder="Forecasted Low in &#8457;" type="number" min="-50" max="90" className="validate"/>
         <input id="forecastHigh" onChange={this.changeForecast} name="forecastHigh"
         placeholder="Forecasted High in &#8457;" type="number" min="-50" max="90" className="validate"/>
         <input id="forecastedSkyVis" onChange={this.changeForecast} name="forecastedSkyVis"
         placeholder="Forecasted Sky Visibility" type="text"  className="validate"/>
-        <br></br>
         <input id="forecastedPrecip" onChange={this.changeForecast} name="forecastedPrecip"
         placeholder="Forecasted Preciptation" type="text"  className="validate"/>
         <input id="forecastedWind" onChange={this.changeForecast} name="forecastedWind"
         placeholder="Forecasted Wind in MPH" type="number" min="0" max="100" className="validate"/>
         <input id="forecastedGust" onChange={this.changeForecast} name="forecastedGust"
         placeholder="Forecasted Gusts in MPH" type="number" min="0" max="100" className="validate"/>
+        </div>
 
-        <h4 className="inWell left">Actual Weather</h4>
+        <div className="col-sm-6">
+        <h4 className="inWell underline left">Actual</h4>
         <input id="actualLow" placeholder="Actual Low in &#8457;" onChange={this.changeActual} name="actualLow" type="number" min="0" max="100" className="validate"/>
         <input id="actualHigh" placeholder="Actual High in &#8457;" onChange={this.changeActual} name="actualHigh" type="number" min="0" max="100" className="validate"/>
         <input id="actualSkyVis" onChange={this.changeActual} name="actualSkyVis"
         placeholder="Actual Sky Visibility" type="text"  className="validate"/>
-        <br></br>
         <input id="actualPrecip" onChange={this.changeActual} name="actualPrecip"
         placeholder="Actual Precipitation" type="text"  className="validate"/>
         <input id="actualWind" onChange={this.changeActual} name="actualWind"
         placeholder="Actual Wind" type="text"  className="validate"/>
-        <br></br>
         <textarea id="actualWeather" onChange={this.changeActual} name="actualWeather" placeholder="Actual Weather" type="text" rows="4" cols="50"
-        className="validate"></textarea>
+        className="validate textCenter"></textarea>
+        </div>
+</div>
 
-        <h3 className="inWell">Approach</h3>
+<div className="col-sm-12"><hr></hr></div>
+
+    <div className="col-sm-12">
+    <h3 className="inWell">Approach</h3>
+
+      <div className="col-sm-6">
+      <h4 className="inWell underline">Ideal</h4>
         <textarea id="idealApproach" onChange={this.changeApproach} name="idealApproach"
-        placeholder="Ideal Approach" type="text" rows="4" cols="50" className="validate"></textarea>
+        placeholder="Ideal Approach" type="text" rows="4" cols="50" className="validate textCenter"></textarea>
+        </div>
+      <div className="col-sm-6">
+      <h4 className="inWell underline">Backup</h4>
         <textarea id="backupApproach" onChange={this.changeApproach} name="backupApproach"
-        placeholder="Backup Approach" type="text" rows="4" cols="50" className="validate"></textarea>
+        placeholder="Backup Approach" type="text" rows="4" cols="50" className="validate textCenter"></textarea>
+        </div>
+    </div>
 
+    
         <h3 className="inWell">Trip Report</h3>
         <textarea id="tripReport" onChange={this.changeTripReport} name="tripReport" placeholder="Trip Report" type="text" rows="8" cols="150"
         className="validate"></textarea>
         <br></br>
         <input id="routePhoto" onChange={this.changeTripReport} name="routePhoto"
         placeholder="Add Route Photo" type="text"  className="validate"/>
+
 
          <br></br>
          <br></br>

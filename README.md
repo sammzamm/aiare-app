@@ -5,9 +5,10 @@ Please check out the deployed URL below:
 http://thewhiteroom.herokuapp.com/
 
 #Technologies implimented:
--React.js
+-React
 -PostgreSQL
 -Knex
 -Node
 -Express
 -Bootstrap
+-Charts.js

@@ -10,7 +10,7 @@ class Profile extends React.Component {
       email: '',
       city: '',
       state: '',
-      profile_pic: '',
+      profile_pic: '../images/avitar.png',
       observational_data:[]
     }
   }

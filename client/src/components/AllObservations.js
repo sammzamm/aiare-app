@@ -4,12 +4,12 @@ import { withRouter } from 'react-router-dom';
 import { render } from 'react-dom';
 import CommentForm from './CommentForm';
 import Footer from './Footer';
+import TripReport from './TripReport';
 
 
 class AllObservations extends React.Component{
   constructor(props){
     super(props)
-
     this.state = {
       observations: []
     }
@@ -27,6 +27,7 @@ class AllObservations extends React.Component{
       })
     }
     render(){
+      let parentLocation = this.props.location.pathname;
       var listItems = this.state.observations.map(function(item, index){
         return (
           <div key={index}>
@@ -123,6 +124,7 @@ class AllObservations extends React.Component{
                 <img className="pitPhoto" src={item.pit_photo} alt="Pit Photo"></img>
                 </div>
                 <div className="col-sm-12">
+                <TripReport locationParent={index+1} />
                 </div>
 
                 <hr></hr>
@@ -154,9 +156,13 @@ class AllObservations extends React.Component{
                 <hr></hr>
                 </div>
 
+                <div className="col-sm-12">
+                <h3 className="inWell">Approach</h3>
+                </div>
 
-
-
+                <div className="myOwnHR">
+                <hr></hr>
+                </div>
 
               </div>
               </div>
@@ -167,6 +173,7 @@ class AllObservations extends React.Component{
         )
       })
       return (
+
         <div className="container">
                   <h2>All Posts</h2>
           {listItems}
