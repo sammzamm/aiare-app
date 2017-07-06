@@ -10,7 +10,7 @@ exports.seed = function(knex) {
           email: 'sammzamm01@gmail.com',
           city: 'Boulder',
           state: 'CO',
-          profile_pic: 'http://taskexchange.cochrane.org/assets/default-profile-bfeeabd02c3b38305b18e4c2345fd54dbbd1a0a7bf403a31f08fca4fada50449.png'
+          profile_pic: 'https://cdn-files.apstatic.com/climb/113266469_medium_1499313760.jpg'
         },
         {
           id: 2,
@@ -19,7 +19,7 @@ exports.seed = function(knex) {
           email: 'jonathan.carson@colorado.edu',
           city: 'Loveland',
           state: 'CO',
-          profile_pic: 'http://taskexchange.cochrane.org/assets/default-profile-bfeeabd02c3b38305b18e4c2345fd54dbbd1a0a7bf403a31f08fca4fada50449.png'
+          profile_pic: 'https://scontent.xx.fbcdn.net/v/t31.0-8/15800394_10209718361370634_5311348966395259236_o.jpg?oh=c270eb8d2a1664c720c89c8607c361b3&oe=59D28290'
         },
         {
           id: 3,
@@ -28,7 +28,7 @@ exports.seed = function(knex) {
           email: 'robd1189@gmail.com',
           city: 'Denver',
           state: 'CO',
-          profile_pic: 'http://taskexchange.cochrane.org/assets/default-profile-bfeeabd02c3b38305b18e4c2345fd54dbbd1a0a7bf403a31f08fca4fada50449.png'
+          profile_pic: 'https://scontent.xx.fbcdn.net/v/t31.0-8/18595496_4871984122779_5687193950514546677_o.jpg?oh=48053d98d10218abcdbe11ef892b2b06&oe=5A11FA58'
         }
       ]);
     }).then(() => {

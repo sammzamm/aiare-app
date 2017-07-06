@@ -20,15 +20,41 @@ class AllObservations extends React.Component{
       })
       .then(res => res.json())
       .then(observations => {
-        console.log(observations);
-        this.setState({
-          observations:observations
+        fetch('/api/comments', {
+          credentials:'include'
+        }).then(res => res.json())
+        .then(comments => {
+          for(var i = 0; i < observations.length; i++){
+            observations[i].comments = [];
+            for(var j = 0; j < comments.length; j++){
+              if(comments[j].observational_data_id === observations[i].id){
+                observations[i].comments.push(comments[j]);
+              }
+            }
+          }
+          this.setState({
+            observations:observations
+          })
         })
       })
     }
     render(){
       let parentLocation = this.props.location.pathname;
       var listItems = this.state.observations.map(function(item, index){
+        let commentItems = item.comments.map(function(comment, i){
+          return(
+            <div className="col-sm-12" key={i}>
+              <div className="row">
+                <div className="col-sm-1">
+                  <img className="commentAvatar" src={comment.profile_pic}/>
+                </div>
+                <div className="col-sm-11 white-text">
+                  <p><strong>{comment.first_name} {comment.last_name} says: </strong>{comment.body}</p>
+                </div>
+              </div>
+            </div>
+          )
+        })
         return (
           <div key={index}>
           <div className="well">
@@ -124,12 +150,12 @@ class AllObservations extends React.Component{
                 </div>
                 <div className="col-sm-12">
                 <h3 className="inWell">Pit Layers</h3>
+                </div>
                 <div  id="tripReport" className="col-sm-12">
                 <TripReport locationParent={index+1} />
                 </div>
-                </div>
 
-                <div className="col-sm-12">
+                <div id="marg" className="col-sm-12">
                 <hr></hr>
                 </div>
 
@@ -162,7 +188,38 @@ class AllObservations extends React.Component{
 
                 <div className="col-sm-12">
                 <h3 className="inWell">Approach</h3>
+                <div className="col-sm-6">
+                <h4 className="inWell underline">Ideal</h4>
+                <h5 className="inWell">{item.ideal_approach}</h5>
                 </div>
+                <div className="col-sm-6">
+                <h4 className="inWell underline">Backup</h4>
+                <h5 className="inWell">{item.backup_approach}</h5>
+                </div>
+                </div>
+
+                <div className="col-sm-12">
+                <hr></hr>
+                </div>
+
+                <div className="col-sm-12">
+                <h3 className="inWell">Trip Report</h3>
+                <h5 className="inWell">{item.trip_report}</h5>
+                <br></br>
+                <img id="routePhoto" src={item.route_photo} alt="Route Photo"></img>
+                </div>
+
+                <div className="col-sm-12">
+                <hr></hr>
+                </div>
+
+                <div className="col-sm-4">
+                <h3 className="inWell" id="comments">Comments:</h3>
+                <h5 className="inWell">{commentItems}</h5>
+                </div>
+
+                <div className="col-sm-4"></div>
+                <div className="col-sm-4"></div>
 
                 <div className="col-sm-12">
                 <hr></hr>

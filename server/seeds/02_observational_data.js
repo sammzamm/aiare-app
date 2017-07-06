@@ -52,20 +52,20 @@ exports.seed = function(knex) {
           pit_photo: 'https://befitapps.com/wp-content/uploads/2015/12/avigeek-snowpit-tignes.jpg',
           forecast_low_temp: 18,
           forecast_high_temp: 28,
-          forecast_sky_visibility: 'rowValue1',
-          forecast_precipitation: 'rowValue1',
+          forecast_sky_visibility: 'bluebird',
+          forecast_precipitation: 'none',
           forecast_wind: 30,
           forecast_gust: 40,
           actual_low_temp: 19,
           actual_high_temp: 28,
           actual_sky_visibility: 'cloudy, cumulous',
-          actual_precipitation: 'rowValue1',
+          actual_precipitation: 'heavy snow in late afternoon',
           actual_weather: 'low atmospheric stability.',
           actual_wind: 'average winds with constant winds around 20mph and gusts around 30mph',
           ideal_approach: 'Drop in from the summit of Snow Bench.  Approach from Glacier Gorge Trailhead.',
           backup_approach: 'Head up saddle to Stoneman Pass and click in.  Approach from Glacier Gorge Trailhead.',
           trip_report: 'Good time to Black Lake and cautious traversing under McHenrys peak to Snow Bench where we soloed to the ridgeline.  Winds were too agressive to summit so we dropped in on our line immediatly.  Sluff was light but fast with the pitch of the slope.',
-          route_photo: ''
+          route_photo: 'https://cdn-files.apstatic.com/climb/106386145_medium_1494103930.jpg'
         },
         {
           id: 2,
@@ -115,7 +115,7 @@ exports.seed = function(knex) {
           pit_slide_shoulder: true,
           pit_slide_body_weight: false,
           pit_slide_jump: false,
-          pit_photo: 'https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwijuPrTudzUAhVl4IMKHfPXDYUQjBwIBA&url=http%3A%2F%2Fmooseradio.com%2Ffiles%2F2011%2F02%2FRott_-Bkmore-pit_MARKED.jpg&psig=AFQjCNGkcNZ7flgvlY9Ig-wnn8oEXp3xvA&ust=1498598731747356',
+          pit_photo: 'http://peakmountainguides.com/blog/wp-content/uploads/2011/01/DSC00041.jpg',
           forecast_low_temp: 15,
           forecast_high_temp: 23,
           forecast_sky_visibility: 'low visibility',
@@ -131,7 +131,7 @@ exports.seed = function(knex) {
           ideal_approach: 'standard low angle approach to flattop summit',
           backup_approach: 'not necessary',
           trip_report: 'Left the Bear Lake Trailhead at 6am for 2 laps on flattop mtn, shortly after cleaning up Erics spilled coffee in my 3 day old elantra which apparently drives like a go-kart in snow.  Winds were horriffic and required that we had no exposed skin while traveling.  Dropped off of the western side and skied hard crust to treeline where we re-skinned the skis and took a second lap.  Eric wrapped up the day by making soup for us and spilling it on my previously immaculate seats.',
-          route_photo: ''
+          route_photo: 'https://www.adn.com/resizer/TxNvdO3k5H-kA2f9hAi-sk8LqJQ=/992x0/s3.amazonaws.com/arc-wordpress-client-uploads/adn/wp-content/uploads/2016/10/13102235/Flattop-winter-hike.jpg?token=bar'
         },
         {
           id: 3,
@@ -184,8 +184,8 @@ exports.seed = function(knex) {
           pit_photo: 'http://www.mtavalanche.com/sites/default/files/images/N%20Bridger%20Snowpit.preview.jpg',
           forecast_low_temp: 23,
           forecast_high_temp: 32,
-          forecast_sky_visibility: 'rowValue1',
-          forecast_precipitation: 'rowValue1',
+          forecast_sky_visibility: 'minimal clouds with great visibility',
+          forecast_precipitation: 'light snow on and off',
           forecast_wind: 5,
           forecast_gust: 15,
           actual_low_temp: 25,
@@ -197,7 +197,7 @@ exports.seed = function(knex) {
           ideal_approach: 'Glacier Gorge Basin trailhead to ramp north/east of black lake.',
           backup_approach: 'not necessary',
           trip_report: 'Skinned in making good time to Black Lake where we re-upped on calories and re-assessed conditions.  Climbed the Trough, clicked in and ripped!  Small 10 foot drop near the bottom is no joke.  Make sure your legs are solid or you are guaranteed to eat rock.',
-          route_photo: ''
+          route_photo: 'http://images.summitpost.org/medium/377800.jpg'
         }
       ]);
     }).then(() => {

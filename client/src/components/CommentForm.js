@@ -41,7 +41,7 @@ class CommentForm extends React.Component{
       <h3 className="inWell">Comments</h3>
       <hr></hr>
       <textarea id="comments" name="comment" onChange={this.changeComment}></textarea>
-      <button onClick={this.sendData}>Submit</button>
+      <button className="btn" onClick={this.sendData}>Submit</button>
       </div>
     )
   }

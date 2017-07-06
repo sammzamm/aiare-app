@@ -214,10 +214,25 @@ h6{
 
 #tripReport{
   margin-left: 1%;
-  width: 1040px;
+  width: 1050px;
   height: 100px;
 }
 
 #snowpack{
   margin-left: 32%
+}
+
+#routePhoto{
+  margin-left: 23%;
+  width: 600px;
+  height: auto;
+  border-radius: 10px;
+}
+
+h3#comments{
+  margin-left: 8%;
+}
+.commentAvatar{
+  width:50px;
+  border-radius:25%
 }
