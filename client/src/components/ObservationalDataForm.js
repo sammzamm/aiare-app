@@ -395,7 +395,7 @@ class ObservationalDataForm extends React.Component{
         </div>
 
         <br></br>
-        <div className="myOwnHR">
+        <div className="col-sm-12">
           <hr></hr>
         </div>
 
@@ -404,7 +404,7 @@ class ObservationalDataForm extends React.Component{
           <textarea id="snowpack" onChange={this.changeSnowpack} name="snowpack" type="text" className="validate textBox"></textarea>
         </div>
 
-        <div className="myOwnHR">
+        <div className="col-sm-12">
           <hr></hr>
         </div>
 
@@ -412,18 +412,17 @@ class ObservationalDataForm extends React.Component{
           <h3 className="inWell">Avy Pit</h3>
 
           <div className="col-sm-6">
-            <h4 className="inWell">Notes</h4>
+            <h4 className="inWell underline">Pit Depth</h4>
             <input id="pitDepthFeet" onChange={this.changeSlopeAngle} name="pitDepthFeet" placeholder="Feet" type="number" min="0" max="10" className="validate" />
             <input id="pitDepthInches" placeholder="Inches" onChange={this.changeSlopeAngle} name="pitDepthInches" type="number" min="0" max="11" className="validate" />
             <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
+            <h5 className="inWell">Pit Photo</h5>
+            <input id="pitPhoto" placeholder="Pit Photo URL" onChange={this.changePitPhoto} name="pitPhoto" type="text" className="validate" />
             <br></br>
             <br></br>
           </div>
 
-          <h4 className="inWell">Trigger</h4>
+          <h4 className="inWell underline">Trigger</h4>
 
           <div className="col-sm-2"></div>
 
@@ -443,15 +442,9 @@ class ObservationalDataForm extends React.Component{
             <input id="jump" value="Jump" onChange={this.changePitSlide} name="trigger" type="radio" className="validate" />
             <label className="inWell" htmlFor="jump">Jump</label>
           </div>
-          <div className="col-sm-2"></div>
         </div>
-        <div className="col-sm-6">
-        </div>
-        <div className="col-sm-6 inWell">
-          <h5>Pit Photo</h5>
-          <input id="pitPhoto" placeholder="Pit Photo URL" onChange={this.changePitPhoto} name="pitPhoto" type="text" className="validate" />
-        </div>
-        <br></br>
+
+
 
         <div className="col-sm-12">
           <hr></hr>
@@ -503,7 +496,7 @@ class ObservationalDataForm extends React.Component{
 
         <div className="col-sm-12">
           <h3 className="inWell">Trip Report</h3>
-          <textarea id="tripReport" onChange={this.changeTripReport} name="tripReport" placeholder="Trip Report" type="text" rows="8" cols="147" className="validate"></textarea>
+          <textarea id="tripReport" onChange={this.changeTripReport} name="tripReport" placeholder="Trip Report" type="text" rows="8" cols="200" className="validate"></textarea>
           <br></br>
           <input id="routePhoto" onChange={this.changeTripReport} name="routePhoto" placeholder="Add Route Photo" type="text" className="validate" />
         </div>
