@@ -322,11 +322,11 @@ class ObservationalDataForm extends React.Component{
         <div className="col-sm-12">
           <h3 className="inWell">Location</h3>
           <div className="col-sm-6">
-          <label htmlFor="date" className="col-sm-8 col-form-label inWell">Date</label>
-            <label htmlFor="location" className="col-sm-8 col-form-label inWell">Location</label>
-            <label htmlFor="subRegion" className="col-sm-8 col-form-label inWell">Sub Region</label>
-            <label htmlFor="elevation" className="col-sm-8 col-form-label inWell">Elevation</label>
-            <label htmlFor="slopeAngle" className="col-sm-8 col-form-label inWell">Slope Angle</label>
+          <label htmlFor="date" className="col-sm-8 col-form-label inWell loc">Date</label>
+            <label htmlFor="location" className="col-sm-8 col-form-label inWell loc">Location</label>
+            <label htmlFor="subRegion" className="col-sm-8 col-form-label inWell loc">Sub Region</label>
+            <label htmlFor="elevation" className="col-sm-8 col-form-label inWell loc">Elevation</label>
+            <label htmlFor="slopeAngle" className="col-sm-8 col-form-label inWell loc">Slope Angle</label>
           </div>
 
           <div className="col-sm-6">
