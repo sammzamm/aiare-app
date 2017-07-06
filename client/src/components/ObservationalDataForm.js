@@ -74,19 +74,52 @@ class ObservationalDataForm extends React.Component{
     this.changeAspect = this.changeAspect.bind(this);
     this.changeElevation = this.changeElevation.bind(this);
     this.changeSlopeAngle = this.changeSlopeAngle.bind(this);
-    this.changeSnowType = this.changeSnowType.bind(this);
     this.changeSnowpack = this.changeSnowpack.bind(this);
     this.changeSnowpackInFeet = this.changeSnowpackInFeet.bind(this);
     this.changeSnowpackInInches = this.changeSnowpackInInches.bind(this);
     this.changePitSlide = this.changePitSlide.bind(this);
     this.changePitPhoto = this.changePitPhoto.bind(this);
-    this.changeForecast = this.changeForecast.bind(this);
-    this.changeActual = this.changeActual.bind(this);
-    this.changeApproach = this.changeApproach.bind(this);
+    this.changeForecastLow = this.changeForecastLow.bind(this);
+    this.changeForecastHigh = this.changeForecastHigh.bind(this);
+    this.changeForecastSkyVis = this.changeForecastSkyVis.bind(this);
+    this.changeForecastPrecip = this.changeForecastPrecip.bind(this);
+    this.changeForecastWind = this.changeForecastWind.bind(this);
+    this.changeForecastGust = this.changeForecastGust.bind(this);
+    this.changeActualHigh = this.changeActualHigh.bind(this);
+    this.changeActualLow = this.changeActualLow.bind(this);
+    this.changeActualSkyVis = this.changeActualSkyVis.bind(this);
+    this.changeActualPrecip = this.changeActualPrecip.bind(this);
+    this.changeActualWeather = this.changeActualWeather.bind(this);
+    this.changeActualWind = this.changeActualWind.bind(this);
+    this.changeBackup = this.changeBackup.bind(this);
+    this.changeIdeal = this.changeIdeal.bind(this);
+    this.changeTripReport = this.changeTripReport.bind(this);
+    this.changeTripPhoto = this.changeTripPhoto.bind(this);
     this.changeTripReport = this.changeTripReport.bind(this);
     this.changeLayer = this.changeLayer.bind(this);
     this.changeDate = this.changeDate.bind(this);
-
+    this.changeLooseDry = this.changeLooseDry.bind(this);
+    this.changeLooseWet = this.changeLooseWet.bind(this);
+    this.changeWetSlab = this.changeWetSlab.bind(this);
+    this.changeStormSlab = this.changeStormSlab.bind(this);
+    this.changeWindSlab = this.changeWindSlab.bind(this);
+    this.changePersistantSlab = this.changePersistantSlab.bind(this);
+    this.changeDeepSlab = this.changeDeepSlab.bind(this);
+    this.changeCornice = this.changeCornice.bind(this);
+    this.changeFreshSnow = this.changeFreshSnow.bind(this);
+    this.changeWarming = this.changeWarming.bind(this);
+    this.changeWeakLayers = this.changeWeakLayers.bind(this);
+    this.changeLeeward = this.changeLeeward.bind(this);
+    this.changeCrossloading = this.changeCrossloading.bind(this);
+    this.changeDepthHoar = this.changeDepthHoar.bind(this);
+    this.changeSurfaceHoar = this.changeSurfaceHoar.bind(this);
+    this.changeHoarFrost = this.changeHoarFrost.bind(this);
+    this.changeGraupel = this.changeGraupel.bind(this);
+    this.changeFacets = this.changeFacets.bind(this);
+    this.changeWoomphing = this.changeWoomphing.bind(this);
+    this.changeShootingCracks = this.changeShootingCracks.bind(this);
+    this.changeConvexRoller = this.changeConvexRoller.bind(this);
+    this.changeConcaveRoller = this.changeConcaveRoller.bind(this);
 
     this.sendData = this.sendData.bind(this);
     this.handleRedirect = this.handleRedirect.bind(this);
@@ -127,31 +160,114 @@ class ObservationalDataForm extends React.Component{
       slope_angle: event.target.value
     })
   }
-
-  changeSnowType(event){
+  changeLooseDry(event){
     this.setState({
-      loose_dry: event.target.checked,
-      loose_wet: event.target.checked,
-      wet_slab: event.target.checked,
-      storm_slab: event.target.checked,
-      wind_slab: event.target.checked,
-      persistant_slab: event.target.checked,
-      deep_slab: event.target.checked,
-      cornice: event.target.checked,
-      fresh_snow: event.target.checked,
-      warming: event.target.checked,
-      weak_layers: event.target.checked,
-      leeward: event.target.checked,
-      crossloading: event.target.checked,
-      depth_hoar: event.target.checked,
-      surface_hoar: event.target.checked,
-      hoar_frost: event.target.checked,
-      graupel: event.target.checked,
-      facets: event.target.checked,
-      woomphing: event.target.checked,
-      shooting_cracks: event.target.checked,
-      convex_roller: event.target.checked,
-      concave_roller: event.target.checked,
+      loose_dry:event.target.checked
+    })
+  }
+  changeLooseWet(event){
+    this.setState({
+      loose_wet:event.target.checked
+    })
+  }
+  changeWetSlab(event){
+    this.setState({
+      wet_slab:event.target.checked
+    })
+  }
+  changeStormSlab(event){
+    this.setState({
+      storm_slab:event.target.checked
+    })
+  }
+  changeWindSlab(event){
+    this.setState({
+      wind_slab:event.target.checked
+    })
+  }
+  changePersistantSlab(event){
+    this.setState({
+      persistant_slab:event.target.checked
+    })
+  }
+  changeDeepSlab(event){
+    this.setState({
+      deep_slab:event.target.checked
+    })
+  }
+  changeCornice(event){
+    this.setState({
+      cornice:event.target.checked
+    })
+  }
+  changeFreshSnow(event){
+    this.setState({
+      fresh_snow:event.target.checked
+    })
+  }
+  changeWarming(event){
+    this.setState({
+      warming:event.target.checked
+    })
+  }
+  changeWeakLayers(event){
+    this.setState({
+      weak_layers:event.target.checked
+    })
+  }
+  changeLeeward(event){
+    this.setState({
+      leeward:event.target.checked
+    })
+  }
+  changeCrossloading(event){
+    this.setState({
+      crossloading:event.target.checked
+    })
+  }
+  changeDepthHoar(event){
+    this.setState({
+      depth_hoar:event.target.checked
+    })
+  }
+  changeSurfaceHoar(event){
+    this.setState({
+      surface_hoar:event.target.checked
+    })
+  }
+  changeHoarFrost(event){
+    this.setState({
+      hoar_frost:event.target.checked
+    })
+  }
+  changeGraupel(event){
+    this.setState({
+      graupel:event.target.checked
+    })
+  }
+  changeFacets(event){
+    this.setState({
+      facets:event.target.checked
+    })
+  }
+  changeWoomphing(event){
+    this.setState({
+      woomphing:event.target.checked
+    })
+  }
+  changeShootingCracks(event){
+    this.setState({
+      shooting_cracks:event.target.checked
+    })
+  }
+  changeConvexRoller(event){
+    this.setState({
+      convex_roller:event.target.checked
+    })
+  }
+  changeConcaveRoller(event){
+    this.setState({
+      concave_roller:event.target.checked
     })
   }
 
@@ -226,42 +342,93 @@ class ObservationalDataForm extends React.Component{
       pit_photo: event.target.value
     })
   }
-
-  changeForecast(event){
-    this.setState({
-      forecast_low_temp: event.target.value,
-      forecast_high_temp: event.target.value,
-      forecast_sky_visibility: event.target.value,
-      forecast_precipitation: event.target.value,
-      forecast_wind: event.target.value,
-      forecast_gust: event.target.value
-    })
-  }
-
-  changeActual(event){
+  ///////////////////////////////////////////////////////////////
+changeForecastLow(event){
+  this.setState({
+    forecast_low_temp: event.target.value
+  })
+}
+changeForecastHigh(event){
+  this.setState({
+    forecast_high_temp: event.target.value
+  })
+}
+changeForecastSkyVis(event){
+  this.setState({
+    forecast_sky_visibility: event.target.value
+  })
+}
+changeForecastPrecip(event){
+  this.setState({
+    forecast_precipitation: event.target.value
+  })
+}
+changeForecastWind(event){
+  this.setState({
+    forecast_wind: event.target.value
+  })
+}
+changeForecastGust(event){
+  this.setState({
+    forecast_gust: event.target.value
+  })
+}
+  ///////////////////////////////////////////////////////////////
+  changeActualLow(event){
     this.setState({
       actual_low_temp: event.target.value,
+    })
+  }
+  changeActualHigh(event){
+    this.setState({
       actual_high_temp: event.target.value,
+    })
+  }
+  changeActualSkyVis(event){
+    this.setState({
       actual_sky_visibility: event.target.value,
+    })
+  }
+  changeActualPrecip(event){
+    this.setState({
       actual_precipitation: event.target.value,
+    })
+  }
+  changeActualWeather(event){
+    this.setState({
       actual_weather: event.target.value,
-      actual_wind: event.target.value
+    })
+  }
+  changeActualWind(event){
+    this.setState({
+      actual_wind: event.target.value,
     })
   }
 
-  changeApproach(event){
+  ///////////////////////////////////////////////////////////////
+  changeIdeal(event){
     this.setState({
       ideal_approach: event.target.value,
+    })
+  }
+  changeBackup(event){
+    this.setState({
       backup_approach: event.target.value
     })
   }
-
+  ///////////////////////////////////////////////////////////////
   changeTripReport(event){
     this.setState({
       trip_report: event.target.value,
+    })
+  }
+  changeTripPhoto(event){
+    this.setState({
       route_photo: event.target.value
     })
   }
+///////////////////////////////////////////////////////////////
+
 
   changeLayer(event){
     if(event.target.placeholder == 'Depth in Feet'){
@@ -361,9 +528,9 @@ class ObservationalDataForm extends React.Component{
         </div>
 
         <div className="col-sm-3">
-          <input id="leeward" className="snowType" onChange={this.changeSnowType} name="leeward" type="checkbox" className="validate" />
+          <input id="leeward" className="snowType" onChange={this.changeLeeward} name="leeward" type="checkbox" className="validate" />
           <label className="inWell" htmlFor="leeward">Leeward</label>
-          <input id="crossloading" className="snowType" onChange={this.changeSnowType} name="crossloading" type="checkbox" className="validate" />
+          <input id="crossloading" className="snowType" onChange={this.changeCrossloading} name="crossloading" type="checkbox" className="validate" />
           <label className="inWell" htmlFor="crossloading">Crossloading</label>
         </div>
 
@@ -375,108 +542,108 @@ class ObservationalDataForm extends React.Component{
         <h3 className="inWell">Objective Hazards</h3>
         <div className="col-sm-3">
           <div>
-            <input id="looseDry" className="snowType" onChange={this.changeSnowType} name="looseDry" type="checkbox" className="validate" />
+            <input id="looseDry" className="snowType" onChange={this.changeLooseDry} name="looseDry" type="checkbox" className="validate" />
             <label className="inWell" htmlFor="looseDry">Loose Dry</label>
           </div>
 
           <div>
-            <input id="looseWet" className="snowType" onChange={this.changeSnowType} name="looseWet" type="checkbox" className="validate" />
+            <input id="looseWet" className="snowType" onChange={this.changeLooseWet} name="looseWet" type="checkbox" className="validate" />
             <label className="inWell" htmlFor="looseWet">Loose Wet</label>
           </div>
 
           <div>
-            <input id="wetSlab" className="snowType" onChange={this.changeSnowType} name="wetSlab" type="checkbox" className="validate" />
+            <input id="wetSlab" className="snowType" onChange={this.changeWetSlab} name="wetSlab" type="checkbox" className="validate" />
             <label className="inWell" htmlFor="wetSlab">Wet Slab</label>
           </div>
 
           <div>
-            <input id="stormSlab" className="snowType" onChange={this.changeSnowType} name="stormSlab" type="checkbox" className="validate" />
+            <input id="stormSlab" className="snowType" onChange={this.changeStormSlab} name="stormSlab" type="checkbox" className="validate" />
             <label className="inWell" htmlFor="stormSlab">Storm Slab</label>
           </div>
 
           <div>
-            <input id="windSlab" className="snowType" onChange={this.changeSnowType} name="windSlab" type="checkbox" className="validate" />
+            <input id="windSlab" className="snowType" onChange={this.changeWindSlab} name="windSlab" type="checkbox" className="validate" />
             <label className="inWell" htmlFor="windSlab">Wind Slab</label>
           </div>
         </div>
 
         <div className="col-sm-3">
           <div>
-            <input id="persistantSlab" className="snowType" onChange={this.changeSnowType} name="persistantSlab" type="checkbox" className="validate" />
+            <input id="persistantSlab" className="snowType" onChange={this.changePersistantSlab} name="persistantSlab" type="checkbox" className="validate" />
             <label className="inWell" htmlFor="persistantSlab">Persistant Slab</label>
           </div>
 
           <div>
-            <input id="deepSlab" className="snowType" onChange={this.changeSnowType} name="deepSlab" type="checkbox" className="validate" />
+            <input id="deepSlab" className="snowType" onChange={this.changeDeepSlab} name="deepSlab" type="checkbox" className="validate" />
             <label className="inWell" htmlFor="deepSlab">Deep Slab</label>
           </div>
 
           <div>
-            <input id="cornice" className="snowType" onChange={this.changeSnowType} name="cornice" type="checkbox" className="validate" />
+            <input id="cornice" className="snowType" onChange={this.changeCornice} name="cornice" type="checkbox" className="validate" />
             <label className="inWell" htmlFor="cornice">Cornice</label>
           </div>
 
           <div>
-            <input id="freshSnow" className="snowType" onChange={this.changeSnowType} name="freshSnow" type="checkbox" className="validate" />
+            <input id="freshSnow" className="snowType" onChange={this.changeFreshSnow} name="freshSnow" type="checkbox" className="validate" />
             <label className="inWell" htmlFor="freshSnow">Fresh Snow</label>
           </div>
 
           <div>
-            <input id="warming" className="snowType" onChange={this.changeSnowType} name="warming" type="checkbox" className="validate" />
-            <label className="inWell" htmlFor="warming">Warming</label>
+            <input id="woomphing" className="snowType" onChange={this.changeWoomphing} name="woomphing" type="checkbox" className="validate" />
+            <label className="inWell" htmlFor="woomphing">Woomphing</label>
           </div>
         </div>
 
         <div className="col-sm-3">
           <div>
-            <input id="weakLayers" className="snowType" onChange={this.changeSnowType} name="weakLayers" type="checkbox" className="validate" />
+            <input id="weakLayers" className="snowType" onChange={this.changeWeakLayers} name="weakLayers" type="checkbox" className="validate" />
             <label className="inWell" htmlFor="weakLayers">Weak Layers</label>
           </div>
 
           <div>
-            <input id="depth_hoar" className="snowType" onChange={this.changeSnowType} name="depth_hoar" type="checkbox" className="validate" />
+            <input id="depth_hoar" className="snowType" onChange={this.changeDepthHoar} name="depth_hoar" type="checkbox" className="validate" />
             <label className="inWell" htmlFor="depth_hoar">Depth Hoar</label>
           </div>
 
           <div>
-            <input id="surface_hoar" className="snowType" onChange={this.changeSnowType} name="surface_hoar" type="checkbox" className="validate" />
+            <input id="surface_hoar" className="snowType" onChange={this.changeSurfaceHoar} name="surface_hoar" type="checkbox" className="validate" />
             <label className="inWell" htmlFor="surface_hoar">Surface Hoar</label>
           </div>
 
           <div>
-            <input id="hoar_frost" className="snowType" onChange={this.changeSnowType} name="hoar_frost" type="checkbox" className="validate" />
+            <input id="hoar_frost" className="snowType" onChange={this.changeHoarFrost} name="hoar_frost" type="checkbox" className="validate" />
             <label className="inWell" htmlFor="hoar_frost">Hoar Frost</label>
           </div>
 
           <div>
-            <input id="graupel" className="snowType" onChange={this.changeSnowType} name="graupel" type="checkbox" className="validate" />
+            <input id="graupel" className="snowType" onChange={this.changeGraupel} name="graupel" type="checkbox" className="validate" />
             <label className="inWell" htmlFor="graupel">Graupel</label>
           </div>
         </div>
 
         <div className="col-sm-3">
           <div>
-            <input id="facets" className="snowType" onChange={this.changeSnowType} name="facets" type="checkbox" className="validate" />
+            <input id="facets" className="snowType" onChange={this.changeFacets} name="facets" type="checkbox" className="validate" />
             <label className="inWell" htmlFor="facets">Facets</label>
           </div>
 
           <div>
-            <input id="woomphing" className="snowType" onChange={this.changeSnowType} name="woomphing" type="checkbox" className="validate" />
-            <label className="inWell" htmlFor="woomphing">Woomphing</label>
+            <input id="warming" className="snowType" onChange={this.changeWarming} name="warming" type="checkbox" className="validate" />
+            <label className="inWell" htmlFor="warming">Warming</label>
           </div>
 
           <div>
-            <input id="shooting_cracks" className="snowType" onChange={this.changeSnowType} name="shooting_cracks" type="checkbox" className="validate" />
+            <input id="shooting_cracks" className="snowType" onChange={this.changeShootingCracks} name="shooting_cracks" type="checkbox" className="validate" />
             <label className="inWell" htmlFor="shooting_cracks">Shooting Cracks</label>
           </div>
 
           <div>
-            <input id="convex_roller" className="snowType" onChange={this.changeSnowType} name="convex_roller" type="checkbox" className="validate" />
+            <input id="convex_roller" className="snowType" onChange={this.changeConvexRoller} name="convex_roller" type="checkbox" className="validate" />
             <label className="inWell" htmlFor="convex_roller">Convex Roller</label>
           </div>
 
           <div>
-            <input id="concave_roller" className="snowType" onChange={this.changeSnowType} name="concave_roller" type="checkbox" className="validate" />
+            <input id="concave_roller" className="snowType" onChange={this.changeConcaveRoller} name="concave_roller" type="checkbox" className="validate" />
             <label className="inWell" htmlFor="concave_roller">Concave Roller</label>
           </div>
         </div>
@@ -622,22 +789,22 @@ class ObservationalDataForm extends React.Component{
           <h3 className="inWell">Weather</h3>
           <div className="col-sm-6">
             <h4 className="inWell underline left">Forecast</h4>
-            <input id="forecastLow" onChange={this.changeForecast} name="forecastLow" placeholder="Forecasted Low in &#8457;" type="number" min="-50" max="90" className="validate" />
-            <input id="forecastHigh" onChange={this.changeForecast} name="forecastHigh" placeholder="Forecasted High in &#8457;" type="number" min="-50" max="90" className="validate" />
-            <input id="forecastedSkyVis" onChange={this.changeForecast} name="forecastedSkyVis" placeholder="Forecasted Sky Visibility" type="text" className="validate" />
-            <input id="forecastedPrecip" onChange={this.changeForecast} name="forecastedPrecip" placeholder="Forecasted Preciptation" type="text" className="validate" />
-            <input id="forecastedWind" onChange={this.changeForecast} name="forecastedWind" placeholder="Forecasted Wind in MPH" type="number" min="0" max="100" className="validate" />
-            <input id="forecastedGust" onChange={this.changeForecast} name="forecastedGust" placeholder="Forecasted Gusts in MPH" type="number" min="0" max="100" className="validate" />
+            <input id="forecastLow" onChange={this.changeForecastLow} name="forecastLow" placeholder="Forecasted Low in &#8457;" type="number" min="-50" max="90" className="validate" />
+            <input id="forecastHigh" onChange={this.changeForecastHigh} name="forecastHigh" placeholder="Forecasted High in &#8457;" type="number" min="-50" max="90" className="validate" />
+            <input id="forecastedSkyVis" onChange={this.changeForecastSkyVis} name="forecastedSkyVis" placeholder="Forecasted Sky Visibility" type="text" className="validate" />
+            <input id="forecastedPrecip" onChange={this.changeForecastPrecip} name="forecastedPrecip" placeholder="Forecasted Preciptation" type="text" className="validate" />
+            <input id="forecastedWind" onChange={this.changeForecastWind} name="forecastedWind" placeholder="Forecasted Wind in MPH" type="number" min="0" max="100" className="validate" />
+            <input id="forecastedGust" onChange={this.changeForecastGust} name="forecastedGust" placeholder="Forecasted Gusts in MPH" type="number" min="0" max="100" className="validate" />
           </div>
 
           <div className="col-sm-6">
             <h4 className="inWell underline left">Actual</h4>
-            <input id="actualLow" placeholder="Actual Low in &#8457;" onChange={this.changeActual} name="actualLow" type="number" min="0" max="100" className="validate" />
-            <input id="actualHigh" placeholder="Actual High in &#8457;" onChange={this.changeActual} name="actualHigh" type="number" min="0" max="100" className="validate" />
-            <input id="actualSkyVis" onChange={this.changeActual} name="actualSkyVis" placeholder="Actual Sky Visibility" type="text" className="validate" />
-            <input id="actualPrecip" onChange={this.changeActual} name="actualPrecip" placeholder="Actual Precipitation" type="text" className="validate" />
-            <input id="actualWind" onChange={this.changeActual} name="actualWind" placeholder="Actual Wind" type="text" className="validate" />
-            <textarea id="actualWeather" onChange={this.changeActual} name="actualWeather" placeholder="Actual Weather" type="text" rows="4" cols="50" className="validate textCenter"></textarea>
+            <input id="actualLow" placeholder="Actual Low in &#8457;" onChange={this.changeActualLow} name="actualLow" type="number" min="0" max="100" className="validate" />
+            <input id="actualHigh" placeholder="Actual High in &#8457;" onChange={this.changeActualHigh} name="actualHigh" type="number" min="0" max="100" className="validate" />
+            <input id="actualSkyVis" onChange={this.changeActualSkyVis} name="actualSkyVis" placeholder="Actual Sky Visibility" type="text" className="validate" />
+            <input id="actualPrecip" onChange={this.changeActualPrecip} name="actualPrecip" placeholder="Actual Precipitation" type="text" className="validate" />
+            <input id="actualWind" onChange={this.changeActualWind} name="actualWind" placeholder="Actual Wind" type="text" className="validate" />
+            <textarea id="actualWeather" onChange={this.changeActualWeather} name="actualWeather" placeholder="Actual Weather" type="text" rows="4" cols="50" className="validate textCenter"></textarea>
           </div>
         </div>
 

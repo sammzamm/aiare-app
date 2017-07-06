@@ -9,8 +9,8 @@ const router = express.Router();
 router.post('/', (req, res, next) => {
   let newPost = req.body
   newPost.owner_id = 1;
-  newPost.date_of_outing='2-6-17';
   delete newPost.redirect;
+  console.log(newPost);
   knex('observational_data')
     .returning('*')
     .insert(newPost)
