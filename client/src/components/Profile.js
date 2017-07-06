@@ -135,7 +135,7 @@ class Profile extends React.Component {
               </div>
 
               <div className="col-sm-12">
-              <hr></hr>
+              <hr id="marg"></hr>
               </div>
 
               <div className="col-sm-12 inWell">
@@ -167,6 +167,25 @@ class Profile extends React.Component {
 
               <div className="col-sm-12">
               <h3 className="inWell">Approach</h3>
+              <div className="col-sm-6">
+              <h4 className="inWell underline">Ideal</h4>
+              <h5 className="inWell">{item.ideal_approach}</h5>
+              </div>
+              <div className="col-sm-6">
+              <h4 className="inWell underline">Backup</h4>
+              <h5 className="inWell">{item.backup_approach}</h5>
+              </div>
+              </div>
+
+              <div className="col-sm-12">
+              <hr></hr>
+              </div>
+
+              <div className="col-sm-12">
+              <h3 className="inWell">Trip Report</h3>
+              <h5 className="inWell">{item.trip_report}</h5>
+              <br></br>
+              <img id="routePhoto" src={item.route_photo} alt="Route Photo"></img>
               </div>
 
               <div className="col-sm-12">
@@ -181,6 +200,7 @@ class Profile extends React.Component {
       )
     })
     return (
+      <div>
       <div className="container" id="profile">
         <div className="col-lg-3"><img className="profilePic" src={this.state.profile_pic}></img></div>
         <div className="col-lg-7" id="profileInfo">
@@ -198,6 +218,7 @@ class Profile extends React.Component {
             {listItems}
           </div>
         </div>
+      </div>
       </div>
     )
   }
