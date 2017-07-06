@@ -399,6 +399,87 @@ class ObservationalDataForm extends React.Component{
           <hr></hr>
         </div>
 
+      <div className="col-sm-12">
+      <h3 className="inWell">Pit Layers</h3>
+
+         <div className="col-sm-3">
+         <label className="inWell layerMarg" htmlFor="layer_1">Bottom Layer:</label>
+         <br></br>
+         <label className="inWell layerMarg" htmlFor="layer_2">2nd Layer: </label>
+         <br></br>
+         <label className="inWell layerMarg" htmlFor="layer_3">3rd Layer: </label>
+         <br></br>
+         <label className="inWell layerMarg" htmlFor="layer_4">4th Layer: </label>
+         <br></br>
+         <label className="inWell layerMarg" htmlFor="layer_5">5th Layer: </label>
+         <br></br>
+         <label className="inWell layerMarg" htmlFor="layer_6">6th Layer: </label>
+         <br></br>
+         <label className="inWell layerMarg" htmlFor="layer_7">7th Layer: </label>
+         <br></br>
+         <label className="inWell layerMarg" htmlFor="layer_8">8th Layer: </label>
+         <br></br>
+         <label className="inWell layerMarg" htmlFor="layer_9">9th Layer: </label>
+         <br></br>
+         <label className="inWell layerMarg" htmlFor="layer_10">10th Layer: </label>
+         <br></br>
+         <label className="inWell layerMarg" htmlFor="layer_11">11th Layer: </label>
+         <br></br>
+         <label className="inWell layerMarg" htmlFor="layer_12">12th Layer: </label>
+         </div>
+
+         <div className="col-sm-3">
+
+          <input className="layerChart" onChange={this.changeSnowType} name="layer_1" type="text" className="validate" placeholder="Type of Layer" />
+          <input className="layerChart" onChange={this.changeSnowType} name="layer_2" type="text" className="validate" placeholder="Type of Layer" />
+          <input className="layerChart" onChange={this.changeSnowType} name="layer_3" type="text" className="validate" placeholder="Type of Layer" />
+          <input className="layerChart" onChange={this.changeSnowType} name="layer_4" type="text" className="validate" placeholder="Type of Layer" />
+          <input className="layerChart" onChange={this.changeSnowType} name="layer_5" type="text" className="validate" placeholder="Type of Layer" />
+          <input className="layerChart" onChange={this.changeSnowType} name="layer_6" type="text" className="validate" placeholder="Type of Layer" />
+          <input className="layerChart" onChange={this.changeSnowType} name="layer_7" type="text" className="validate" placeholder="Type of Layer" />
+          <input className="layerChart" onChange={this.changeSnowType} name="layer_8" type="text" className="validate" placeholder="Type of Layer" />
+          <input className="layerChart" onChange={this.changeSnowType} name="layer_9" type="text" className="validate" placeholder="Type of Layer" />
+          <input className="layerChart" onChange={this.changeSnowType} name="layer_10" type="text" className="validate" placeholder="Type of Layer" />
+          <input className="layerChart" onChange={this.changeSnowType} name="layer_11" type="text" className="validate" placeholder="Type of Layer" />
+          <input className="layerChart" onChange={this.changeSnowType} name="layer_12" type="text" className="validate" placeholder="Type of  Layer" />
+         </div>
+         <div className="col-sm-3">
+         <input className="layerChart" onChange={this.changeSnowType} name="layer_1" type="number" className="validate" placeholder="Depth in Feet" />
+         <input className="layerChart" onChange={this.changeSnowType} name="layer_2" type="number" className="validate" placeholder="Depth in Feet" />
+         <input className="layerChart" onChange={this.changeSnowType} name="layer_3" type="number" className="validate" placeholder="Depth in Feet" />
+         <input className="layerChart" onChange={this.changeSnowType} name="layer_4" type="number" className="validate" placeholder="Depth in Feet" />
+         <input className="layerChart" onChange={this.changeSnowType} name="layer_5" type="number" className="validate" placeholder="Depth in Feet" />
+         <input className="layerChart" onChange={this.changeSnowType} name="layer_6" type="number" className="validate" placeholder="Depth in Feet" />
+         <input className="layerChart" onChange={this.changeSnowType} name="layer_7" type="number" className="validate" placeholder="Depth in Feet" />
+         <input className="layerChart" onChange={this.changeSnowType} name="layer_8" type="number" className="validate" placeholder="Depth in Feet" />
+         <input className="layerChart" onChange={this.changeSnowType} name="layer_9" type="number" className="validate" placeholder="Depth in Feet" />
+         <input className="layerChart" onChange={this.changeSnowType} name="layer_10" type="number" className="validate" placeholder="Depth in Feet" />
+         <input className="layerChart" onChange={this.changeSnowType} name="layer_11" type="number" className="validate" placeholder="Depth in Feet" />
+         <input className="layerChart" onChange={this.changeSnowType} name="layer_12" type="number" className="validate" placeholder="Depth in Feet" />
+         </div>
+         <div className="col-sm-3">
+
+         <input className="layerChart" onChange={this.changeSnowType} name="layer_1" type="number" className="validate" placeholder="Depth in Inches" />
+         <input className="layerChart" onChange={this.changeSnowType} name="layer_2" type="number" className="validate" placeholder="Depth in Inches" />
+         <input className="layerChart" onChange={this.changeSnowType} name="layer_3" type="number" className="validate" placeholder="Depth in Inches" />
+         <input className="layerChart" onChange={this.changeSnowType} name="layer_4" type="number" className="validate" placeholder="Depth in Inches" />
+         <input className="layerChart" onChange={this.changeSnowType} name="layer_5" type="number" className="validate" placeholder="Depth in Inches" />
+         <input className="layerChart" onChange={this.changeSnowType} name="layer_6" type="number" className="validate" placeholder="Depth in Inches" />
+         <input className="layerChart" onChange={this.changeSnowType} name="layer_7" type="number" className="validate" placeholder="Depth in Inches" />
+         <input className="layerChart" onChange={this.changeSnowType} name="layer_8" type="number" className="validate" placeholder="Depth in Inches" />
+         <input className="layerChart" onChange={this.changeSnowType} name="layer_9" type="number" className="validate" placeholder="Depth in Inches" />
+         <input className="layerChart" onChange={this.changeSnowType} name="layer_10" type="number" className="validate" placeholder="Depth in Inches" />
+         <input className="layerChart" onChange={this.changeSnowType} name="layer_11" type="number" className="validate" placeholder="Depth in Inches" />
+         <input className="layerChart" onChange={this.changeSnowType} name="layer_12" type="number" className="validate" placeholder="Depth in Inches" />
+
+         </div>
+      </div>
+
+        <br></br>
+        <div className="col-sm-12">
+          <hr></hr>
+        </div>
+
         <div className="col-sm-12">
           <h3 className="inWell">Snowpack Notes</h3>
           <textarea id="snowpack" onChange={this.changeSnowpack} name="snowpack" type="text" className="validate textBox"></textarea>

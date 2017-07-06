@@ -138,9 +138,9 @@ h6{
 }
 
 #profile{
-  width:90%;
+  width:95%;
   background-color:rgba(0,0,0,0.5);
-  height:65vh;
+  height:83vh;
   color:white;
   padding-top:5%;
   border-radius: 10px;
@@ -240,4 +240,16 @@ h3#comments{
 
 #marg{
   margin-top: 430px;
+}
+
+.layerChart{
+  margin-left: 8px
+}
+
+#layerWrap > input{
+  float:right;
+}
+
+.layerMarg{
+  margin-top: 11px;
 }
