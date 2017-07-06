@@ -32,6 +32,7 @@ class AllObservations extends React.Component{
               }
             }
           }
+          observations.reverse();
           this.setState({
             observations:observations
           })

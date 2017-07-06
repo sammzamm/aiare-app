@@ -817,11 +817,11 @@ changeForecastGust(event){
 
           <div className="col-sm-6">
             <h4 className="inWell underline">Ideal</h4>
-            <textarea id="idealApproach" onChange={this.changeApproach} name="idealApproach" placeholder="Ideal Approach" type="text" rows="4" cols="50" className="validate textCenter"></textarea>
+            <textarea id="idealApproach" onChange={this.changeIdeal} name="idealApproach" placeholder="Ideal Approach" type="text" rows="4" cols="50" className="validate textCenter"></textarea>
           </div>
           <div className="col-sm-6">
             <h4 className="inWell underline">Backup</h4>
-            <textarea id="backupApproach" onChange={this.changeApproach} name="backupApproach" placeholder="Backup Approach" type="text" rows="4" cols="50" className="validate textCenter"></textarea>
+            <textarea id="backupApproach" onChange={this.changeBackup} name="backupApproach" placeholder="Backup Approach" type="text" rows="4" cols="50" className="validate textCenter"></textarea>
           </div>
         </div>
 
@@ -833,7 +833,7 @@ changeForecastGust(event){
           <h3 className="inWell">Trip Report</h3>
           <textarea id="tripReport" onChange={this.changeTripReport} name="tripReport" placeholder="Trip Report" type="text" rows="8" cols="200" className="validate"></textarea>
           <br></br>
-          <input id="routePhoto" onChange={this.changeTripReport} name="routePhoto" placeholder="Add Route Photo" type="text" className="validate" />
+          <input id="routePhoto" onChange={this.changeTripPhoto} name="routePhoto" placeholder="Add Route Photo" type="text" className="validate" />
         </div>
 
         <div className="col-sm-12">
