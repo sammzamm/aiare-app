@@ -10,8 +10,18 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/:id', (req, res, next) => {
-  const id = req.params.id;
-  return knex('users').select('first_name', 'last_name', 'email', 'zip', 'profile_pic').where('id', id).first().then((user) => res.json(user)).catch((err) => next(err));
+  knex('users')
+    .where('id', req.params.id)
+    .then((result) => {
+      let user = result[0]
+      knex('observational_data')
+        .where('owner_id', user.id)
+        .then((trips) => {
+          delete user.hashed_password;
+          user.trips = trips;
+          res.json(user);
+        })
+    })
 });
 
 router.get('/observational_data/:id', (req, res, next) => {

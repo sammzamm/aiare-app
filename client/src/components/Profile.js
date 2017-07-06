@@ -16,21 +16,37 @@ class Profile extends React.Component {
     }
   }
   componentWillMount() {
-      fetch(`/api/myprofile`, {
-         credentials:'include'
-      })
-      .then(res => res.json())
-      .then(user => {
-        this.setState({
-          first_name:user.first_name,
-          last_name:user.last_name,
-          email:user.email,
-          city:user.city,
-          state:user.state,
-          profile_pic:user.profile_pic,
-          observational_data:user.trips
+      if(this.props.location.pathname.includes('myprofile')){
+        fetch(`/api/myprofile`, {
+          credentials:'include'
         })
-      })
+        .then(res => res.json())
+        .then(user => {
+          this.setState({
+            first_name:user.first_name,
+            last_name:user.last_name,
+            email:user.email,
+            city:user.city,
+            state:user.state,
+            profile_pic:user.profile_pic,
+            observational_data:user.trips
+          })
+        })
+      }else{
+        fetch(`/api${this.props.location.pathname}`)
+          .then(res => res.json())
+          .then(user => {
+            this.setState({
+              first_name:user.first_name,
+              last_name:user.last_name,
+              email:user.email,
+              city:user.city,
+              state:user.state,
+              profile_pic:user.profile_pic,
+              observational_data:user.trips
+            })
+          })
+      }
    }
   render(){
     var listItems = this.state.observational_data.map(function(item, index){

@@ -46,7 +46,7 @@ class AllObservations extends React.Component{
             <div className="col-sm-12" key={i}>
               <div className="row">
                 <div className="col-sm-1">
-                  <img className="commentAvatar" src={comment.profile_pic}/>
+                  <Link to={`/users/${comment.user_id}`}><img className="commentAvatar" id={comment.user_id} src={comment.profile_pic}/></Link>
                 </div>
                 <div className="col-sm-11 white-text">
                   <p><strong>{comment.first_name} {comment.last_name} says: </strong>{comment.body}</p>
