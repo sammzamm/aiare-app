@@ -48,6 +48,8 @@ class TripReport extends Component {
      labels: [],
      datasets: layers}
      let chartOptions = {
+      maintainAspectRatio:false,
+      responsive:false,
       scales: {
         yAxes: [{
           ticks: {
@@ -58,7 +60,7 @@ class TripReport extends Component {
   }
     return (
       <div className="container" id="trip">
-        <Line data={chartData} options={chartOptions}/>
+        <Line data={chartData} options={chartOptions} width={1010} height={500}/>
       </div>
     )
   }

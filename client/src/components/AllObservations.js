@@ -80,7 +80,7 @@ class AllObservations extends React.Component{
 
                 <br></br>
 
-                <div className="myOwnHR">
+                <div className="col-sm-12">
                 <hr></hr>
                 </div>
 
@@ -90,7 +90,7 @@ class AllObservations extends React.Component{
                 <h5 className="inWell">&#9900;  Current snowpack is {item.snowpack_in_feet} feet and {item.snowpack_in_inches} inches.</h5>
                 </div>
 
-                <div className="myOwnHR">
+                <div className="col-sm-12">
                 <hr></hr>
                 </div>
 
@@ -115,19 +115,23 @@ class AllObservations extends React.Component{
                 <h5 className={item.pit_slide_jump}>From a Jump</h5>
                 </div>
 
-                <div className="myOwnHR">
+                <div className="col-sm-12">
                 <hr></hr>
                 </div>
-
 
                 <div className="col-sm-12">
                 <img className="pitPhoto" src={item.pit_photo} alt="Pit Photo"></img>
                 </div>
                 <div className="col-sm-12">
+                <h3 className="inWell">Pit Layers</h3>
+                <div  id="tripReport" className="col-sm-12">
                 <TripReport locationParent={index+1} />
                 </div>
+                </div>
 
+                <div className="col-sm-12">
                 <hr></hr>
+                </div>
 
                 <div className="col-sm-12 inWell">
                 <h3>Weather</h3>
@@ -152,7 +156,7 @@ class AllObservations extends React.Component{
                 </div>
                 </div>
 
-                <div className="myOwnHR">
+                <div className="col-sm-12">
                 <hr></hr>
                 </div>
 
@@ -160,7 +164,7 @@ class AllObservations extends React.Component{
                 <h3 className="inWell">Approach</h3>
                 </div>
 
-                <div className="myOwnHR">
+                <div className="col-sm-12">
                 <hr></hr>
                 </div>
 

@@ -179,8 +179,9 @@ h6{
   color: #18d318;
 }
 
-.myOwnHR{
-  margin-top: 150px;
+#tripReport{
+  width: 500px;
+  height: auto;
 }
 
 .pitPhoto{
@@ -216,5 +217,5 @@ h6{
 }
 
 #snowpack{
-  margin-left: 32% 
+  margin-left: 32%
 }

@@ -505,7 +505,7 @@ class ObservationalDataForm extends React.Component{
 
         <div className="col-sm-12">
           <h3 className="inWell">Trip Report</h3>
-          <textarea id="tripReport" onChange={this.changeTripReport} name="tripReport" placeholder="Trip Report" type="text" rows="8" cols="100" className="validate"></textarea>
+          <textarea id="tripReport" onChange={this.changeTripReport} name="tripReport" placeholder="Trip Report" type="text" rows="8" cols="147" className="validate"></textarea>
           <br></br>
           <input id="routePhoto" onChange={this.changeTripReport} name="routePhoto" placeholder="Add Route Photo" type="text" className="validate" />
         </div>
@@ -513,7 +513,7 @@ class ObservationalDataForm extends React.Component{
         <div className="col-sm-12">
           <hr></hr>
         </div>
-        
+
         <br></br>
 
         <button className="btn-default btn" onClick={this.sendData}>Submit</button>
