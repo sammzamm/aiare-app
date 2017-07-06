@@ -29,7 +29,7 @@ exports.seed = function(knex) {
           surface_hoar: false,
           hoar_frost: false,
           graupel: true,
-          facets: true,
+          facets: true, 
           woomphing: false,
           shooting_cracks: false,
           convex_roller: true,
