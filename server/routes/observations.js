@@ -7,17 +7,16 @@ const router = express.Router();
 
 // create observational data post
 router.post('/', (req, res, next) => {
-  const newPost = req.body
-  console.log(newPost);
+  let newPost = req.body
   newPost.owner_id = 1;
+  newPost.date_of_outing='2-6-17';
+  delete newPost.redirect;
   knex('observational_data')
     .returning('*')
     .insert(newPost)
-    .then((thing) => {
-      console.log(thing);
-      res.sendStatus(200)}
-    )
-    .catch((err) => (err))
+    .then((post) => {
+      res.sendStatus(200)
+    })
 })
 
 
