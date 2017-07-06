@@ -422,7 +422,7 @@ class ObservationalDataForm extends React.Component{
             <br></br>
           </div>
 
-          <h4 className="inWell underline">Trigger</h4>
+          <h4 className="inWell underline">Compression Test</h4>
 
           <div className="col-sm-2"></div>
 
