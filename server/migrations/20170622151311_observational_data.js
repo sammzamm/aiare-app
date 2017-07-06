@@ -5,8 +5,8 @@ exports.up = function(knex) {
     table.increments();
     table.integer('owner_id').references('id').inTable('users').notNullable().onDelete('CASCADE');
     table.string('date_of_outing', 10).notNullable();
-    table.string('location', 12).notNullable();
-    table.string('sub_region', 20).notNullable();
+    table.string('location', 22).notNullable();
+    table.string('sub_region', 22).notNullable();
     table.string('aspect', 255).notNullable();
     table.boolean('leeward');
     table.boolean('crossloading');

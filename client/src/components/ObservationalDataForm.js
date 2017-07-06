@@ -82,6 +82,7 @@ class ObservationalDataForm extends React.Component{
     this.changeActual = this.changeActual.bind(this);
     this.changeApproach = this.changeApproach.bind(this);
     this.changeTripReport = this.changeTripReport.bind(this);
+    this.changeDate = this.changeDate.bind(this);
 
     this.sendData = this.sendData.bind(this);
 
@@ -215,6 +216,11 @@ class ObservationalDataForm extends React.Component{
     })
   }
 
+  changeDate(event){
+    this.setState({
+      date_of_outing: event.target.value
+    })
+  }
 
   sendData(event){
     event.preventDefault();
@@ -241,16 +247,22 @@ class ObservationalDataForm extends React.Component{
           <h3 className="inWell">Location</h3>
 
           <div className="col-sm-6">
-            <label htmlFor="location" className="col-sm-8 col-form-label inWell">Location</label>
-            <label htmlFor="subRegion" className="col-sm-8 col-form-label inWell">Sub Region</label>
-            <label htmlFor="elevation" className="col-sm-8 col-form-label inWell">Elevation</label>
-            <label htmlFor="slopeAngle" className="col-sm-8 col-form-label inWell">Slope Angle</label>
+          <label htmlFor="date" className="col-sm-8 col-form-label inWell loc">Date</label>
+            <label htmlFor="location" className="col-sm-8 col-form-label inWell loc">Location</label>
+            <label htmlFor="subRegion" className="col-sm-8 col-form-label inWell loc">Sub Region</label>
+            <label htmlFor="elevation" className="col-sm-8 col-form-label inWell loc">Elevation</label>
+            <label htmlFor="slopeAngle" className="col-sm-8 col-form-label inWell loc">Slope Angle</label>
           </div>
 
           <div className="col-sm-6">
+          <input id="date" onChange={this.changeDate} name="location" type="text" className="validate form-controll location" placeholder="Date" />
+          <br></br>
             <input id="location" onChange={this.changeLocation} name="location" type="text" className="validate form-controll location" placeholder="Location" />
+            <br></br>
             <input id='subRegion' onChange={this.changeSubRegion} name="subRegion" type="text" className="validate location" placeholder="Sub Region" />
+            <br></br>
             <input id="elevation" placeholder="Elevation" onChange={this.changeElevation} name="elevation" type="number" min="0" max="29029" className="validate location" />
+            <br></br>
             <input id="slopeAngle" placeholder="Slope Angle" onChange={this.changeSlopeAngle} name="slopeAngle" type="number" min="25" max="75" className="validate location" />
           </div>
         </div>
