@@ -232,7 +232,12 @@ h6{
 h3#comments{
   margin-left: 8%;
 }
+
 .commentAvatar{
   width:50px;
   border-radius:25%
+}
+
+#marg{
+  margin-top: 430px;
 }

@@ -151,12 +151,13 @@ class AllObservations extends React.Component{
                 <div className="col-sm-12">
                 <h3 className="inWell">Pit Layers</h3>
                 </div>
+
                 <div  id="tripReport" className="col-sm-12">
                 <TripReport locationParent={index+1} />
                 </div>
 
-                <div id="marg" className="col-sm-12">
-                <hr></hr>
+                <div className="col-sm-12">
+                <hr id="marg"></hr>
                 </div>
 
                 <div className="col-sm-12 inWell">
@@ -215,7 +216,7 @@ class AllObservations extends React.Component{
 
                 <div className="col-sm-4">
                 <h3 className="inWell" id="comments">Comments:</h3>
-                <h5 className="inWell">{commentItems}</h5>
+                <h5 className="inWell underline">{commentItems}</h5>
                 </div>
 
                 <div className="col-sm-4"></div>
