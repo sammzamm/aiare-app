@@ -191,7 +191,7 @@ class Profile extends React.Component {
           <a href="/observationsform" role="button" className="btn btn-secondary align-middle inWell">Add New Trip</a>
         </div>
         <br/><br/>
-      <div className="col-lg-12"><h3>My Trips</h3></div>
+      <div className="col-lg-12"><h2 className="inWell underline">My Trips</h2></div>
 
         <div className="col-lg-12" id="myTrips">
           <div className="row">

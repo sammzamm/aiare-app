@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 import { render } from 'react-dom';
 import {DropdownButton, MenuItem} from 'react-bootstrap/lib';
-import Avatar from './Avatar';
 import Footer from './Footer';
 // import cookie from 'react-cookie';
 
@@ -233,7 +232,6 @@ class ObservationalDataForm extends React.Component{
   render() {
     return (
       <div>
-  <Avatar />
   <div className="container">
     <h2>Observational Data</h2>
     <form>
